@@ -15,6 +15,9 @@ namespace rpass
 {
     class Rlang
     {
+        // Version number
+        public string version = "beta 1.00120322a"; // a = features; b = fixing; 
+
         // Language set goes here
 
         // value of 0 = english
@@ -124,6 +127,11 @@ namespace rpass
         {
             "Generate a password",
             "Generează o parolă"
+        };
+        public string[] title12auth = new string[2] // title12 auth
+        {
+            "Confirm",
+            "Confirmă"
         };
         // minititles
         public string[] minititle1passtobesaved = new string[2] // minititle1 password to be saved
@@ -247,10 +255,10 @@ namespace rpass
         {
             "about placeholder" +
             "\r\n" +
-            "\r\nVersion beta 1.00100322",
+            "\r\nVersion ",
             "about placeholder" +
             "\r\n" +
-            "\r\nVersiune beta 1.00100322"
+            "\r\nVersiune "
         };
         public string[] minititle25notif = new string[2] // minititle25 notif
         {
@@ -426,6 +434,11 @@ namespace rpass
         {
             "Generate",
             "Generează"
+        };
+        public string[] button25continue = new string[2] // minititle25 continue
+        {
+            "Continue",
+            "Continuă"
         };
     }
 }

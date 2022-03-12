@@ -39,7 +39,11 @@ namespace rpass
         public string currentNotificationTitle = "";
         public string currentNotificationContents = "";
         public string currentNotificationCommand = "";
+        
         public int currentGeneratorSize = 15;
+
+        public string currentAuthCommand = "";
+        public string currentAuthFailCommand = "";
 
         // Creating passwords pool
         public List<string> passwordsPool_name = new List<string>();
@@ -140,7 +144,7 @@ namespace rpass
         }
         private void kryptonButtonDashboardSaveandExit_Click(object sender, EventArgs e)
         {
-            Console("save");
+            Console("auth save");
         }
         private void kryptonButtonRPassInfo_Click(object sender, EventArgs e)
         {
@@ -150,7 +154,7 @@ namespace rpass
         {
             Console("interface show generate");
         }
-        // info password
+            // info password
         private void kryptonButtonInfopassShowHidd_Click(object sender, EventArgs e)
         {
             isSure = false;
@@ -389,6 +393,24 @@ namespace rpass
         {
             currentGeneratorSize = 512;
         }
+            // auth
+        private void kryptonButtonAuth_Click(object sender, EventArgs e)
+        {
+            Console("error login reset");
+            if (kryptonTextBoxLoginName.Text == currentUser.name && kryptonTextBoxLoginMasterpassword.Text == currentUser.masterPassword)
+            {
+                Console("error login reset");
+                Console(currentAuthCommand);
+            }
+            else
+            {
+                Console("error login credentials");
+            }
+        }
+        private void kryptonButtonAuthCancel_Click(object sender, EventArgs e)
+        {
+            Console(currentAuthFailCommand);
+        }
 
         // INTERFACE
         public void InterfaceHide_All()
@@ -411,6 +433,7 @@ namespace rpass
             Console("interface hide about");
             Console("interface hide notification");
             Console("interface hide generate");
+            Console("interface hide auth");
         }
 
         // CONSOLE
@@ -1518,11 +1541,29 @@ namespace rpass
                     kryptonButtonGenerateCreate.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonGenerateCreate.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonGenerateCreate.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    // auth
+                    kryptonButtonAuthContinue.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonAuthContinue.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonAuthContinue.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonAuthContinue.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonAuthContinue.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonAuthContinue.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonAuthContinue.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonAuthContinue.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonAuthCancel.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonAuthCancel.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonAuthCancel.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonAuthCancel.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonAuthCancel.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonAuthCancel.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonAuthCancel.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonAuthCancel.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     break;
 
                 case "error login credentials":
                     // error2 wrong credentials
-                    Console("interface show login");
+                    kryptonTextBoxLoginMasterpassword.Text = "";
                     kryptonLabelLoginError.Visible = true;
                     break;
 
@@ -1979,8 +2020,8 @@ namespace rpass
 
                     InterfaceHide_All();
                     // language
-                    kryptonLabelBigTitleAbout.Text = Rlang.title9about[currentUser.language];
-                    kryptonTextBoxAbout.Text = Rlang.minititle24about[currentUser.language];
+                    kryptonLabelBigTitleAbout.Text = Rlang.title9about[currentUser.language] + Rlang.version;
+                    kryptonTextBoxAbout.Text = Rlang.minititle24about[currentUser.language] + Rlang.version;
                     // show
                     kryptonLabelBigTitleAbout.Location = new System.Drawing.Point(276, 12);
                     kryptonLabelBigTitleAbout.Visible = true;
@@ -2133,6 +2174,72 @@ namespace rpass
                     kryptonButtonGenerateCreate.Visible = false;
                     break;
 
+                case "interface show auth":
+                    // hide all interfaces
+                    Console("interface disable dashbutton");
+                    Console("interface disable passwordlist");
+
+                    InterfaceHide_All();
+                    // language
+                    kryptonLabelBigTitleLogin.Text = Rlang.title12auth[currentUser.language];
+                    kryptonLabelLoginName.Text = Rlang.minititle6name[currentUser.language];
+                    kryptonLabelLoginMasterpassword.Text = Rlang.minititle2masterpass[currentUser.language];
+                    kryptonLabelLoginLang.Text = Rlang.minititle17langlang[currentUser.language];
+
+                    kryptonButtonAuthContinue.Text = Rlang.button25continue[currentUser.language];
+                    kryptonButtonAuthCancel.Text = Rlang.button2cancel[currentUser.language];
+
+                    kryptonLabelLoginError.Text = Rlang.error2[currentUser.language];
+                    // show
+                    pictureBox1.Location = new System.Drawing.Point(384, 70);
+                    pictureBox1.Visible = true;
+
+                    kryptonLabelBigTitleLogin.Location = new System.Drawing.Point(322, 160);
+                    kryptonLabelBigTitleLogin.Visible = true;
+                    kryptonLabelLoginName.Location = new System.Drawing.Point(322, 204);
+                    kryptonLabelLoginName.Visible = true;
+                    kryptonLabelLoginMasterpassword.Location = new System.Drawing.Point(322, 269);
+                    kryptonLabelLoginMasterpassword.Visible = true;
+
+                    kryptonButtonAuthContinue.Location = new System.Drawing.Point(322, 334);
+                    kryptonButtonAuthContinue.Visible = true;
+                    kryptonButtonAuthCancel.Location = new System.Drawing.Point(457, 400);
+                    kryptonButtonAuthCancel.Visible = true;
+
+                    kryptonTextBoxLoginName.Location = new System.Drawing.Point(322, 230);
+                    kryptonTextBoxLoginName.Visible = true;
+                    kryptonTextBoxLoginMasterpassword.Location = new System.Drawing.Point(322, 295);
+                    kryptonTextBoxLoginMasterpassword.Text = "";
+                    kryptonTextBoxLoginMasterpassword.Visible = true;
+
+                    kryptonLabelLoginError.Location = new System.Drawing.Point(322, 375);
+                    kryptonLabelLoginError.Visible = false;
+                    break;
+
+                case "interface hide auth":
+                    pictureBox1.Visible = false;
+
+                    kryptonLabelBigTitleLogin.Visible = false;
+                    kryptonLabelLoginName.Visible = false;
+                    kryptonLabelLoginMasterpassword.Visible = false;
+
+                    kryptonButtonAuthContinue.Visible = false;
+                    kryptonButtonAuthCancel.Visible = false;
+
+                    kryptonTextBoxLoginName.Visible = false;
+                    kryptonTextBoxLoginMasterpassword.Text = "";
+                    kryptonTextBoxLoginMasterpassword.Visible = false;
+
+                    kryptonLabelLoginError.Visible = false;
+                    break;
+
+                case "auth save":
+                    // Set auth
+                    currentAuthCommand = "save";
+                    currentAuthFailCommand = "interface show dashboard";
+                    // Show it
+                    Console("interface show auth");
+                    break;
             }
         }
     }
