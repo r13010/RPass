@@ -321,6 +321,14 @@ namespace rpass
             Console("interface theme");
             Console("interface show settings");
         }
+        private void kryptonButtonAccountChangeName_Click(object sender, EventArgs e)
+        {
+            Console("auth changename");
+        }
+        private void kryptonButtonAccountDel_Click(object sender, EventArgs e)
+        {
+            Console("auth deleteaccount1");
+        }
         private void kryptonComboBoxProfileColor_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch(kryptonComboBoxProfileColor.SelectedIndex)
@@ -350,7 +358,7 @@ namespace rpass
                     break;
             }
         }
-        // login
+            // login
         private void kryptonComboBoxLoginLangSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentUser.language = kryptonComboBoxLoginLangSelector.SelectedIndex;
@@ -440,6 +448,39 @@ namespace rpass
         {
             Console(currentAuthFailCommand);
         }
+            // changename
+        private void kryptonButtonChangenameCancel_Click(object sender, EventArgs e)
+        {
+            Console("interface show settings");
+        }
+        private void kryptonButtonChangenameSave_Click(object sender, EventArgs e)
+        {
+            Console("error changename reset");
+            if (kryptonTextBoxChangename.Text == "")
+            {
+                Console("error changename blank");
+            }
+            else
+            {
+                // Change name
+                if (Rfile.UserExists(kryptonTextBoxChangename.Text))
+                {
+                    Console("error changename blank");
+                }
+                else
+                {
+                    try
+                    {
+                        File.Delete(Rfile.savesPath + @"\" + currentUser.name + ".rcrypt");
+                    }
+                    catch
+                    { }
+                    currentUser.name = kryptonTextBoxChangename.Text;
+                    kryptonTextBoxLoginName.Text = kryptonTextBoxChangename.Text;
+                    Console("save");
+                }
+            }
+        }
 
         // INTERFACE
         public void InterfaceHide_All()
@@ -463,6 +504,7 @@ namespace rpass
             Console("interface hide notification");
             Console("interface hide generate");
             Console("interface hide auth");
+            Console("interface hide changename");
         }
 
         // CONSOLE
@@ -1587,6 +1629,30 @@ namespace rpass
                     kryptonButtonAuthCancel.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonAuthCancel.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonAuthCancel.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    // changename
+                    kryptonLabelBigTitleChangename.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonLabelChangenameEnter.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+
+                    kryptonTextBoxChangename.StateCommon.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonTextBoxChangename.StateCommon.Content.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+
+                    kryptonButtonChangenameSave.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangenameSave.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangenameSave.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangenameSave.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangenameSave.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangenameSave.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangenameSave.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangenameSave.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonChangenameCancel.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangenameCancel.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangenameCancel.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangenameCancel.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangenameCancel.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangenameCancel.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangenameCancel.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangenameCancel.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     break;
 
                 case "error login credentials":
@@ -2309,6 +2375,122 @@ namespace rpass
                     pictureBoxUsergreen.Visible = false;
                     pictureBoxUserred.Visible = false;
                     pictureBoxUseryellow.Visible = false;
+                    break;
+
+                case "auth changename":
+                    // Set auth
+                    currentAuthCommand = "interface show changename";
+                    currentAuthFailCommand = "interface show settings";
+                    // Show it
+                    Console("interface show auth");
+                    break;
+
+                case "auth deleteaccount1":
+                    // Set auth
+                    currentAuthCommand = "notification deleteaccount";
+                    currentAuthFailCommand = "interface show settings";
+                    // Show it
+                    Console("interface show auth");
+                    break;
+
+                case "interface show changename":
+                    // hide all interfaces
+                    Console("interface disable dashbutton");
+                    Console("interface disable passwordlist");
+
+                    InterfaceHide_All();
+                    // language
+                    kryptonLabelBigTitleChangename.Text = Rlang.title13changename[currentUser.language];
+                    kryptonLabelChangenameEnter.Text = Rlang.minititle35newname[currentUser.language];
+                    kryptonLabelChangenameReq.Text = Rlang.minititle36namereq[currentUser.language];
+
+                    kryptonButtonChangenameSave.Text = Rlang.button1save[currentUser.language];
+                    kryptonButtonChangenameCancel.Text = Rlang.button2cancel[currentUser.language];
+                    // show
+                    Console("error changename reset");
+                    kryptonLabelBigTitleChangename.Location = new System.Drawing.Point(276, 12);
+                    kryptonLabelBigTitleChangename.Visible = true;
+                    kryptonLabelChangenameEnter.Location = new System.Drawing.Point(276, 115);
+                    kryptonLabelChangenameEnter.Visible = true;
+                    kryptonLabelChangenameReq.Location = new System.Drawing.Point(276, 214);
+                    kryptonLabelChangenameReq.Visible = true;
+
+                    kryptonTextBoxChangename.Location = new System.Drawing.Point(276, 141);
+                    kryptonTextBoxChangename.Text = "";
+                    kryptonTextBoxChangename.Visible = true;
+
+                    kryptonButtonChangenameSave.Location = new System.Drawing.Point(276, 56);
+                    kryptonButtonChangenameSave.Visible = true;
+                    kryptonButtonChangenameCancel.Location = new System.Drawing.Point(363, 56);
+                    kryptonButtonChangenameCancel.Visible = true;
+                    break;
+
+                case "interface hide changename":
+                    kryptonLabelBigTitleChangename.Visible = false;
+                    kryptonLabelChangenameEnter.Visible = false;
+                    kryptonLabelChangenameReq.Visible = false;
+                    kryptonTextBoxChangename.Visible = false;
+                    kryptonButtonChangenameSave.Visible = false;
+                    kryptonButtonChangenameCancel.Visible = false;
+                    break;
+
+                case "error changename blank":
+                    // error the field is blank
+                    for (int i = 2; i != 0; i--)
+                    {
+                        System.Threading.Thread.Sleep(100);
+                        kryptonLabelChangenameReq.StateCommon.ShortText.Color1 = Color.Gray;
+                        kryptonLabelChangenameReq.StateCommon.ShortText.Color2 = Color.Gray;
+                        kryptonLabelChangenameReq.Refresh();
+                        System.Threading.Thread.Sleep(100);
+                        kryptonLabelChangenameReq.StateCommon.ShortText.Color1 = Color.Red;
+                        kryptonLabelChangenameReq.StateCommon.ShortText.Color2 = Color.Red;
+                        kryptonLabelChangenameReq.Refresh();
+                    }
+                    break;
+
+                case "error changename reset":
+                    // error change name reset
+                    kryptonLabelChangenameReq.StateCommon.ShortText.Color1 = Color.Gray;
+                    kryptonLabelChangenameReq.StateCommon.ShortText.Color2 = Color.Gray;
+                    kryptonLabelChangenameReq.Refresh();
+                    break;
+
+                case "notification deleteaccount":
+                    // Set notification
+                    currentNotificationTitle = Rlang.minititle37deleteaccount[currentUser.language];
+                    currentNotificationContents = Rlang.minititle38deleteaccount[currentUser.language];
+                    currentNotificationCommand = "auth deleteaccount2";
+                    // Show it
+                    Console("interface show notification");
+                    break;
+
+                case "notification deletedaccount":
+                    // Set notification
+                    currentNotificationTitle = Rlang.minititle39deletedaccount[currentUser.language];
+                    currentNotificationContents = Rlang.minititle40deletedaccount[currentUser.language];
+                    currentNotificationCommand = "reset";
+                    // Show it
+                    Console("interface show notification");
+                    break;
+
+                case "auth deleteaccount2":
+                    // Set auth
+                    currentAuthCommand = "delete";
+                    currentAuthFailCommand = "interface show settings";
+                    // Show it
+                    Console("interface show auth");
+                    break;
+
+                case "delete":
+                    // delete current account
+                    try
+                    {
+                        File.Delete(Rfile.savesPath + @"\" + currentUser.name + ".rcrypt");
+                    }
+                    catch
+                    { }
+                    Console("notification deletedaccount");
                     break;
             }
         }

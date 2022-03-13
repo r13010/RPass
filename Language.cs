@@ -16,7 +16,7 @@ namespace rpass
     class Rlang
     {
         // Version number
-        public string version = "beta 1.00130322a"; // a = features; b = fixing;
+        public string version = "beta 1.00140322a"; // a = features; b = fixing; 
 
         // Language set goes here
 
@@ -132,6 +132,11 @@ namespace rpass
         {
             "Confirm",
             "Confirmă"
+        };
+        public string[] title13changename = new string[2] // title12 auth
+        {
+            "Change your name",
+            "Schimbă-ți numele"
         };
         // minititles
         public string[] minititle1passtobesaved = new string[2] // minititle1 password to be saved
@@ -313,6 +318,38 @@ namespace rpass
         {
             " Characters",
             " Caractere"
+        };
+        public string[] minititle35newname = new string[2] // minititle35 new name
+        {
+            "Enter a new name:",
+            "Introduce-ți un nume nou:"
+        };
+        public string[] minititle36namereq = new string[2] // minititle36 name req
+        {
+            "*Name can't be blank\n" +
+            "*Can't use a name of an already existing user",
+            "*Numele nu poate fi necompletat\n" +
+            "*Nu se poate folosi numele unui utilizator deja existent"
+        };
+        public string[] minititle37deleteaccount = new string[2] // minititle37 delete account
+        {
+            "Delete account",
+            "Ștergere cont"
+        };
+        public string[] minititle38deleteaccount = new string[2] // minititle38 delete account contents
+        {
+            "You're about to delete your account!\nConfirm again for approval.",
+            "Sunteți pe cale să vă ștergeți contul!\nConfirmați din nou pentru aprobare."
+        };
+        public string[] minititle39deletedaccount = new string[2] // minititle39 deleted account
+        {
+            "Deleted account",
+            "Cont șters"
+        };
+        public string[] minititle40deletedaccount = new string[2] // minititle38 delete account contents
+        {
+            "This account was deleted.",
+            "Acest cont a fost șters."
         };
         //buttons
         public string[] button1save = new string[2] // button1 save
