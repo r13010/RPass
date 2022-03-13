@@ -106,8 +106,6 @@ namespace rpass
             this.kryptonLabelRegisterConfirmMasterpass = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBoxRegisterConfirmMasterpass = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabelBigTitleRegister = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.pictureBoxRPassIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kryptonLabelRegisterSalt = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonTextBoxRegisterSalt1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBoxRegisterSalt2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -139,11 +137,23 @@ namespace rpass
             this.kryptonRadioButtonGeneratorSize5 = new ComponentFactory.Krypton.Toolkit.KryptonRadioButton();
             this.kryptonButtonAuthContinue = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButtonAuthCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBoxUseryellow = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUserred = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUsergreen = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUserblue = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUsergray = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRPassIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLangSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxIfDarkTheme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxProfileColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelAnim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLoginLangSelector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUseryellow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserred)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsergreen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserblue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsergray)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRPassIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -1786,7 +1796,7 @@ namespace rpass
             "Green/Verde",
             "Red/Roșu",
             "Yellow/Galben"});
-            this.kryptonComboBoxProfileColor.Location = new System.Drawing.Point(678, 240);
+            this.kryptonComboBoxProfileColor.Location = new System.Drawing.Point(655, 205);
             this.kryptonComboBoxProfileColor.Name = "kryptonComboBoxProfileColor";
             this.kryptonComboBoxProfileColor.Size = new System.Drawing.Size(169, 29);
             this.kryptonComboBoxProfileColor.Sorted = true;
@@ -1815,6 +1825,7 @@ namespace rpass
             this.kryptonComboBoxProfileColor.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Ubuntu", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonComboBoxProfileColor.TabIndex = 67;
             this.kryptonComboBoxProfileColor.Text = "Gray/Gri";
+            this.kryptonComboBoxProfileColor.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxProfileColor_SelectedIndexChanged);
             // 
             // kryptonPanelAnim
             // 
@@ -2088,7 +2099,7 @@ namespace rpass
             this.kryptonComboBoxLoginLangSelector.Items.AddRange(new object[] {
             "English/Engleză",
             "Romanian/Română"});
-            this.kryptonComboBoxLoginLangSelector.Location = new System.Drawing.Point(657, 240);
+            this.kryptonComboBoxLoginLangSelector.Location = new System.Drawing.Point(648, 240);
             this.kryptonComboBoxLoginLangSelector.Name = "kryptonComboBoxLoginLangSelector";
             this.kryptonComboBoxLoginLangSelector.Size = new System.Drawing.Size(216, 29);
             this.kryptonComboBoxLoginLangSelector.Sorted = true;
@@ -2484,26 +2495,6 @@ namespace rpass
             this.kryptonLabelBigTitleRegister.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
             this.kryptonLabelBigTitleRegister.TabIndex = 91;
             this.kryptonLabelBigTitleRegister.Values.Text = "Register";
-            // 
-            // pictureBoxRPassIcon
-            // 
-            this.pictureBoxRPassIcon.Image = global::rpass.Properties.Resources.rpassiconsmall;
-            this.pictureBoxRPassIcon.Location = new System.Drawing.Point(780, 289);
-            this.pictureBoxRPassIcon.Name = "pictureBoxRPassIcon";
-            this.pictureBoxRPassIcon.Size = new System.Drawing.Size(92, 86);
-            this.pictureBoxRPassIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxRPassIcon.TabIndex = 92;
-            this.pictureBoxRPassIcon.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::rpass.Properties.Resources.usersmall;
-            this.pictureBox1.Location = new System.Drawing.Point(780, 289);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
             // 
             // kryptonLabelRegisterSalt
             // 
@@ -3293,12 +3284,87 @@ namespace rpass
             this.kryptonButtonAuthCancel.Values.Text = "Cancel";
             this.kryptonButtonAuthCancel.Click += new System.EventHandler(this.kryptonButtonAuthCancel_Click);
             // 
+            // pictureBoxUseryellow
+            // 
+            this.pictureBoxUseryellow.Image = global::rpass.Properties.Resources.user_yellow;
+            this.pictureBoxUseryellow.Location = new System.Drawing.Point(780, 289);
+            this.pictureBoxUseryellow.Name = "pictureBoxUseryellow";
+            this.pictureBoxUseryellow.Size = new System.Drawing.Size(92, 86);
+            this.pictureBoxUseryellow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxUseryellow.TabIndex = 128;
+            this.pictureBoxUseryellow.TabStop = false;
+            // 
+            // pictureBoxUserred
+            // 
+            this.pictureBoxUserred.Image = global::rpass.Properties.Resources.user_red;
+            this.pictureBoxUserred.Location = new System.Drawing.Point(780, 289);
+            this.pictureBoxUserred.Name = "pictureBoxUserred";
+            this.pictureBoxUserred.Size = new System.Drawing.Size(92, 86);
+            this.pictureBoxUserred.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxUserred.TabIndex = 127;
+            this.pictureBoxUserred.TabStop = false;
+            // 
+            // pictureBoxUsergreen
+            // 
+            this.pictureBoxUsergreen.Image = global::rpass.Properties.Resources.user_green;
+            this.pictureBoxUsergreen.Location = new System.Drawing.Point(780, 289);
+            this.pictureBoxUsergreen.Name = "pictureBoxUsergreen";
+            this.pictureBoxUsergreen.Size = new System.Drawing.Size(92, 86);
+            this.pictureBoxUsergreen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxUsergreen.TabIndex = 126;
+            this.pictureBoxUsergreen.TabStop = false;
+            // 
+            // pictureBoxUserblue
+            // 
+            this.pictureBoxUserblue.Image = global::rpass.Properties.Resources.user_blue;
+            this.pictureBoxUserblue.Location = new System.Drawing.Point(780, 289);
+            this.pictureBoxUserblue.Name = "pictureBoxUserblue";
+            this.pictureBoxUserblue.Size = new System.Drawing.Size(92, 86);
+            this.pictureBoxUserblue.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxUserblue.TabIndex = 125;
+            this.pictureBoxUserblue.TabStop = false;
+            // 
+            // pictureBoxUsergray
+            // 
+            this.pictureBoxUsergray.Image = global::rpass.Properties.Resources.user_gray;
+            this.pictureBoxUsergray.Location = new System.Drawing.Point(780, 289);
+            this.pictureBoxUsergray.Name = "pictureBoxUsergray";
+            this.pictureBoxUsergray.Size = new System.Drawing.Size(92, 86);
+            this.pictureBoxUsergray.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxUsergray.TabIndex = 124;
+            this.pictureBoxUsergray.TabStop = false;
+            // 
+            // pictureBoxRPassIcon
+            // 
+            this.pictureBoxRPassIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRPassIcon.Image")));
+            this.pictureBoxRPassIcon.Location = new System.Drawing.Point(780, 289);
+            this.pictureBoxRPassIcon.Name = "pictureBoxRPassIcon";
+            this.pictureBoxRPassIcon.Size = new System.Drawing.Size(92, 86);
+            this.pictureBoxRPassIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxRPassIcon.TabIndex = 92;
+            this.pictureBoxRPassIcon.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(780, 289);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.pictureBoxUseryellow);
+            this.Controls.Add(this.pictureBoxUserred);
+            this.Controls.Add(this.pictureBoxUsergreen);
+            this.Controls.Add(this.pictureBoxUserblue);
+            this.Controls.Add(this.pictureBoxUsergray);
             this.Controls.Add(this.kryptonButtonAuthCancel);
             this.Controls.Add(this.kryptonButtonAuthContinue);
             this.Controls.Add(this.kryptonRadioButtonGeneratorSize5);
@@ -3420,6 +3486,11 @@ namespace rpass
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxProfileColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanelAnim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLoginLangSelector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUseryellow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserred)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsergreen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserblue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsergray)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRPassIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -3536,6 +3607,11 @@ namespace rpass
         private ComponentFactory.Krypton.Toolkit.KryptonRadioButton kryptonRadioButtonGeneratorSize5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButtonAuthContinue;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButtonAuthCancel;
+        private System.Windows.Forms.PictureBox pictureBoxUsergray;
+        private System.Windows.Forms.PictureBox pictureBoxUserblue;
+        private System.Windows.Forms.PictureBox pictureBoxUsergreen;
+        private System.Windows.Forms.PictureBox pictureBoxUserred;
+        private System.Windows.Forms.PictureBox pictureBoxUseryellow;
     }
 }
 

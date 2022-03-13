@@ -307,11 +307,11 @@ namespace rpass
         }
         private void kryptonComboBoxUsersettIfDarkTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(kryptonComboBoxIfDarkTheme.SelectedIndex == 0)
+            if (kryptonComboBoxIfDarkTheme.SelectedIndex == 0)
             {
                 currentUser.ifDarkTheme = true;
             }
-            else if(kryptonComboBoxIfDarkTheme.SelectedIndex == 1)
+            else if (kryptonComboBoxIfDarkTheme.SelectedIndex == 1)
             {
                 currentUser.ifDarkTheme = false;
             }
@@ -321,7 +321,36 @@ namespace rpass
             Console("interface theme");
             Console("interface show settings");
         }
-            // login
+        private void kryptonComboBoxProfileColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(kryptonComboBoxProfileColor.SelectedIndex)
+            {
+                case 0:
+                    currentUser.icon = "blue";
+                    break;
+
+                case 1:
+                    currentUser.icon = "gray";
+                    break;
+
+                case 2:
+                    currentUser.icon = "green";
+                    break;
+
+                case 3:
+                    currentUser.icon = "red";
+                    break;
+
+                case 4:
+                    currentUser.icon = "yellow";
+                    break;
+
+                default:
+                    currentUser.icon = "gray";
+                    break;
+            }
+        }
+        // login
         private void kryptonComboBoxLoginLangSelector_SelectedIndexChanged(object sender, EventArgs e)
         {
             currentUser.language = kryptonComboBoxLoginLangSelector.SelectedIndex;
@@ -580,8 +609,7 @@ namespace rpass
                     kryptonLabelDashboardusername.Location = new System.Drawing.Point(276, 148);
                     kryptonLabelDashboardusername.Visible = true;
 
-                    pictureBox1.Location = new System.Drawing.Point(276, 56);
-                    pictureBox1.Visible = true;
+                    Console("interface show profilepicture");
 
                     kryptonLabelDashboardpass.Location = new System.Drawing.Point(276, 197);
                     kryptonLabelDashboardpass.Visible = true;
@@ -609,7 +637,7 @@ namespace rpass
                     kryptonLabelBigTitleDashboard.Visible = false;
                     kryptonLabelDashboardusername.Visible = false;
 
-                    pictureBox1.Visible = false;
+                    Console("interface hide profilepicture");
 
                     kryptonLabelDashboardpass.Visible = false;
                     kryptonLabelDashboardaccount.Visible = false;
@@ -2239,6 +2267,48 @@ namespace rpass
                     currentAuthFailCommand = "interface show dashboard";
                     // Show it
                     Console("interface show auth");
+                    break;
+
+                case "interface show profilepicture":
+                    pictureBoxUsergray.Location = new System.Drawing.Point(276, 56);
+                    pictureBoxUserblue.Location = new System.Drawing.Point(276, 56);
+                    pictureBoxUsergreen.Location = new System.Drawing.Point(276, 56);
+                    pictureBoxUserred.Location = new System.Drawing.Point(276, 56);
+                    pictureBoxUseryellow.Location = new System.Drawing.Point(276, 56);
+                    switch (currentUser.icon)
+                    {
+                        default:
+                            pictureBoxUsergray.Visible = true;
+                            break;
+
+                        case "gray":
+                            pictureBoxUsergray.Visible = true;
+                            break;
+
+                        case "blue":
+                            pictureBoxUserblue.Visible = true;
+                            break;
+
+                        case "green":
+                            pictureBoxUsergreen.Visible = true;
+                            break;
+
+                        case "red":
+                            pictureBoxUserred.Visible = true;
+                            break;
+
+                        case "yellow":
+                            pictureBoxUseryellow.Visible = true;
+                            break;
+                    }
+                    break;
+
+                case "interface hide profilepicture":
+                    pictureBoxUsergray.Visible = false;
+                    pictureBoxUserblue.Visible = false;
+                    pictureBoxUsergreen.Visible = false;
+                    pictureBoxUserred.Visible = false;
+                    pictureBoxUseryellow.Visible = false;
                     break;
             }
         }

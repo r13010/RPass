@@ -136,6 +136,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rpassiconsmall.png" />
+    <None Include="Resources\user-gray.png" />
+    <None Include="Resources\user-blue.png" />
+    <None Include="Resources\user-green.png" />
+    <None Include="Resources\user-red.png" />
+    <None Include="Resources\user-yellow.png" />
     <Content Include="rpassicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
