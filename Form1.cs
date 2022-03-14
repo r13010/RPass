@@ -92,13 +92,13 @@ namespace rpass
                     kryptonLabelReq1.StateCommon.LongText.Color2 = Color.Gray;
                     // Save password in pool
                     kryptonListBox1.Items.Add(kryptonTextBoxName.Text);
-                    passwordsPool_name.Add(Rencrypt.EncryptInterface(kryptonTextBoxName.Text, kryptonTextBoxMasterPassword.Text));
-                    passwordsPool_password.Add(Rencrypt.EncryptInterface(kryptonTextBoxPassword.Text, kryptonTextBoxMasterPassword.Text));
-                    passwordsPool_sitelink.Add(Rencrypt.EncryptInterface(kryptonTextBoxSiteLink.Text, kryptonTextBoxMasterPassword.Text));
-                    passwordsPool_description.Add(Rencrypt.EncryptInterface(kryptonTextBoxDesc.Text, kryptonTextBoxMasterPassword.Text));
-                    passwordsPool_oldpassword1.Add(Rencrypt.EncryptInterface("-", kryptonTextBoxMasterPassword.Text));
-                    passwordsPool_oldpassword2.Add(Rencrypt.EncryptInterface("-", kryptonTextBoxMasterPassword.Text));
-                    passwordsPool_oldpassword3.Add(Rencrypt.EncryptInterface("-", kryptonTextBoxMasterPassword.Text));
+                    passwordsPool_name.Add(Rencrypt.EncryptInterface(kryptonTextBoxName.Text, kryptonTextBoxMasterPassword.Text, currentUser.salt));
+                    passwordsPool_password.Add(Rencrypt.EncryptInterface(kryptonTextBoxPassword.Text, kryptonTextBoxMasterPassword.Text, currentUser.salt));
+                    passwordsPool_sitelink.Add(Rencrypt.EncryptInterface(kryptonTextBoxSiteLink.Text, kryptonTextBoxMasterPassword.Text, currentUser.salt));
+                    passwordsPool_description.Add(Rencrypt.EncryptInterface(kryptonTextBoxDesc.Text, kryptonTextBoxMasterPassword.Text, currentUser.salt));
+                    passwordsPool_oldpassword1.Add(Rencrypt.EncryptInterface("-", kryptonTextBoxMasterPassword.Text, currentUser.salt));
+                    passwordsPool_oldpassword2.Add(Rencrypt.EncryptInterface("-", kryptonTextBoxMasterPassword.Text, currentUser.salt));
+                    passwordsPool_oldpassword3.Add(Rencrypt.EncryptInterface("-", kryptonTextBoxMasterPassword.Text, currentUser.salt));
                     // Dashboard 
                     Console("interface show dashboard");
                 }
@@ -164,12 +164,12 @@ namespace rpass
             {
                 passwordShown = true;
                 // show password
-                kryptonTextBoxPasswordInfoshow.Text = Rencrypt.DecryptInterface(passwordsPool_password[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
-                kryptonLabelSitelinkInfoshow.Text = Rencrypt.DecryptInterface(passwordsPool_sitelink[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
-                kryptonLabelOldpass1.Text = Rencrypt.DecryptInterface(passwordsPool_oldpassword1[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
-                kryptonLabelOldpass2.Text = Rencrypt.DecryptInterface(passwordsPool_oldpassword2[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
-                kryptonLabelOldpass3.Text = Rencrypt.DecryptInterface(passwordsPool_oldpassword3[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
-                kryptonLabelYourDescInfoshow.Text = Rencrypt.DecryptInterface(passwordsPool_description[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
+                kryptonTextBoxPasswordInfoshow.Text = Rencrypt.DecryptInterface(passwordsPool_password[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
+                kryptonLabelSitelinkInfoshow.Text = Rencrypt.DecryptInterface(passwordsPool_sitelink[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
+                kryptonLabelOldpass1.Text = Rencrypt.DecryptInterface(passwordsPool_oldpassword1[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
+                kryptonLabelOldpass2.Text = Rencrypt.DecryptInterface(passwordsPool_oldpassword2[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
+                kryptonLabelOldpass3.Text = Rencrypt.DecryptInterface(passwordsPool_oldpassword3[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
+                kryptonLabelYourDescInfoshow.Text = Rencrypt.DecryptInterface(passwordsPool_description[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
 
                 kryptonButtonInfopassShowHidd.Text = Rlang.button10hide[currentUser.language];
             }
@@ -189,7 +189,7 @@ namespace rpass
         }
         private void kryptonButtonInfopassCopy_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(Rencrypt.DecryptInterface(passwordsPool_password[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language));
+            Clipboard.SetText(Rencrypt.DecryptInterface(passwordsPool_password[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt));
             kryptonTextBoxPasswordInfoshow.Text = Rlang.minititle12copied[currentUser.language];
             isSure = false;
             kryptonButtonInfopassDelete.Text = Rlang.button12delete[currentUser.language];
@@ -245,13 +245,13 @@ namespace rpass
                     kryptonLabelReq1.StateCommon.LongText.Color1 = Color.Gray;
                     kryptonLabelReq1.StateCommon.LongText.Color2 = Color.Gray;
                     // Save edited password in pool
-                    passwordsPool_name[kryptonListBox1.SelectedIndex] = Rencrypt.EncryptInterface(kryptonTextBoxName.Text, kryptonTextBoxMasterPassword.Text);
+                    passwordsPool_name[kryptonListBox1.SelectedIndex] = Rencrypt.EncryptInterface(kryptonTextBoxName.Text, kryptonTextBoxMasterPassword.Text, currentUser.salt);
                     passwordsPool_oldpassword3[kryptonListBox1.SelectedIndex] = passwordsPool_oldpassword2[kryptonListBox1.SelectedIndex];
                     passwordsPool_oldpassword2[kryptonListBox1.SelectedIndex] = passwordsPool_oldpassword1[kryptonListBox1.SelectedIndex];
                     passwordsPool_oldpassword1[kryptonListBox1.SelectedIndex] = passwordsPool_password[kryptonListBox1.SelectedIndex];
-                    passwordsPool_password[kryptonListBox1.SelectedIndex] = Rencrypt.EncryptInterface(kryptonTextBoxPassword.Text, kryptonTextBoxMasterPassword.Text);
-                    passwordsPool_sitelink[kryptonListBox1.SelectedIndex] = Rencrypt.EncryptInterface(kryptonTextBoxSiteLink.Text, kryptonTextBoxMasterPassword.Text);
-                    passwordsPool_description[kryptonListBox1.SelectedIndex] = Rencrypt.EncryptInterface(kryptonTextBoxDesc.Text, kryptonTextBoxMasterPassword.Text);
+                    passwordsPool_password[kryptonListBox1.SelectedIndex] = Rencrypt.EncryptInterface(kryptonTextBoxPassword.Text, kryptonTextBoxMasterPassword.Text, currentUser.salt);
+                    passwordsPool_sitelink[kryptonListBox1.SelectedIndex] = Rencrypt.EncryptInterface(kryptonTextBoxSiteLink.Text, kryptonTextBoxMasterPassword.Text, currentUser.salt);
+                    passwordsPool_description[kryptonListBox1.SelectedIndex] = Rencrypt.EncryptInterface(kryptonTextBoxDesc.Text, kryptonTextBoxMasterPassword.Text, currentUser.salt);
                     // Back to Infopassword
                     Console("interface show infopassword");
                 }
@@ -491,7 +491,6 @@ namespace rpass
             passwordShown = false;
             isSure = false;
 
-            kryptonPanelAnim.Visible = false;
             Console("interface hide createpassword");
             Console("interface hide dashboard");
             Console("interface hide settings");
@@ -651,7 +650,12 @@ namespace rpass
                     kryptonLabelDashboardusername.Location = new System.Drawing.Point(276, 148);
                     kryptonLabelDashboardusername.Visible = true;
 
-                    Console("interface show profilepicture");
+                    pictureBoxUsergray.Location = new System.Drawing.Point(276, 56);
+                    pictureBoxUserblue.Location = new System.Drawing.Point(276, 56);
+                    pictureBoxUsergreen.Location = new System.Drawing.Point(276, 56);
+                    pictureBoxUserred.Location = new System.Drawing.Point(276, 56);
+                    pictureBoxUseryellow.Location = new System.Drawing.Point(276, 56);
+                    Console("interface enable profilepicture");
 
                     kryptonLabelDashboardpass.Location = new System.Drawing.Point(276, 197);
                     kryptonLabelDashboardpass.Visible = true;
@@ -679,7 +683,7 @@ namespace rpass
                     kryptonLabelBigTitleDashboard.Visible = false;
                     kryptonLabelDashboardusername.Visible = false;
 
-                    Console("interface hide profilepicture");
+                    Console("interface disable profilepicture");
 
                     kryptonLabelDashboardpass.Visible = false;
                     kryptonLabelDashboardaccount.Visible = false;
@@ -856,13 +860,13 @@ namespace rpass
                     kryptonLabelName.Location = new System.Drawing.Point(276, 95);
                     kryptonLabelName.Visible = true;
                     kryptonTextBoxName.Location = new System.Drawing.Point(276, 121);
-                    kryptonTextBoxName.Text = Rencrypt.DecryptInterface(passwordsPool_name[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
+                    kryptonTextBoxName.Text = Rencrypt.DecryptInterface(passwordsPool_name[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
                     kryptonTextBoxName.Visible = true;
 
                     kryptonLabelPasswordtobesaved.Location = new System.Drawing.Point(276, 160);
                     kryptonLabelPasswordtobesaved.Visible = true;
                     kryptonTextBoxPassword.Location = new System.Drawing.Point(276, 186);
-                    kryptonTextBoxPassword.Text = Rencrypt.DecryptInterface(passwordsPool_password[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
+                    kryptonTextBoxPassword.Text = Rencrypt.DecryptInterface(passwordsPool_password[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
                     kryptonTextBoxPassword.Visible = true;
 
                     kryptonLabelMasterpassword.Location = new System.Drawing.Point(276, 225);
@@ -874,13 +878,13 @@ namespace rpass
                     kryptonLabelSitelink.Location = new System.Drawing.Point(276, 290);
                     kryptonLabelSitelink.Visible = true;
                     kryptonTextBoxSiteLink.Location = new System.Drawing.Point(276, 316);
-                    kryptonTextBoxSiteLink.Text = Rencrypt.DecryptInterface(passwordsPool_sitelink[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
+                    kryptonTextBoxSiteLink.Text = Rencrypt.DecryptInterface(passwordsPool_sitelink[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
                     kryptonTextBoxSiteLink.Visible = true;
 
                     kryptonLabelDescription.Location = new System.Drawing.Point(276, 355);
                     kryptonLabelDescription.Visible = true;
                     kryptonTextBoxDesc.Location = new System.Drawing.Point(276, 381);
-                    kryptonTextBoxDesc.Text = Rencrypt.DecryptInterface(passwordsPool_description[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language);
+                    kryptonTextBoxDesc.Text = Rencrypt.DecryptInterface(passwordsPool_description[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt);
                     kryptonTextBoxDesc.Visible = true;
 
                     kryptonLabelReq1.Location = new System.Drawing.Point(276, 525);
@@ -930,8 +934,8 @@ namespace rpass
 
                     kryptonLabelLoginError.Text = Rlang.error2[currentUser.language];
                     // show
-                    pictureBox1.Location = new System.Drawing.Point(384, 70);
-                    pictureBox1.Visible = true;
+                    pictureBoxLoginIcon.Location = new System.Drawing.Point(384, 70);
+                    pictureBoxLoginIcon.Visible = true;
 
                     kryptonLabelBigTitleLogin.Location = new System.Drawing.Point(322, 160);
                     kryptonLabelBigTitleLogin.Visible = true;
@@ -962,7 +966,7 @@ namespace rpass
                     break;
 
                 case "interface hide login":
-                    pictureBox1.Visible = false;
+                    pictureBoxLoginIcon.Visible = false;
 
                     kryptonLabelBigTitleLogin.Visible = false;
                     kryptonLabelLoginName.Visible = false;
@@ -1060,15 +1064,15 @@ namespace rpass
                         // Create structure
                         linesToSave.Clear();
 
-                        linesToSave.Add(Rencrypt.EncryptInterface(Rfile.key1, Rfile.key1)); // Line 1: First key, user info
-                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.masterPassword, currentUser.masterPassword)); // Line 2: User’s master password
-                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.language.ToString(), currentUser.masterPassword)); // Line 3: User’s language setting
-                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.name, currentUser.masterPassword)); // Line 4: User’s name
-                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.salt, currentUser.masterPassword)); // Line 5: User’s salt
-                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.icon, currentUser.masterPassword)); // Line 6: User’s icon color setting
-                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.ifDarkTheme.ToString(), currentUser.masterPassword)); // Line 7: User’s theme setting
+                        linesToSave.Add(Rencrypt.EncryptInterface(Rfile.key1, Rfile.key1, defaultUser.salt)); // Line 1: First key, user info
+                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.masterPassword, currentUser.masterPassword, defaultUser.salt)); // Line 2: User’s master password
+                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.language.ToString(), currentUser.masterPassword, currentUser.salt)); // Line 3: User’s language setting
+                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.name, currentUser.masterPassword, currentUser.salt)); // Line 4: User’s name
+                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.salt, currentUser.masterPassword, defaultUser.salt)); // Line 5: User’s salt
+                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.icon, currentUser.masterPassword, currentUser.salt)); // Line 6: User’s icon color setting
+                        linesToSave.Add(Rencrypt.EncryptInterface(currentUser.ifDarkTheme.ToString(), currentUser.masterPassword, currentUser.salt)); // Line 7: User’s theme setting
 
-                        linesToSave.Add(Rencrypt.EncryptInterface(Rfile.key2, Rfile.key2)); // Line 8: Second key, user passwords
+                        linesToSave.Add(Rencrypt.EncryptInterface(Rfile.key2, Rfile.key2, defaultUser.salt)); // Line 8: Second key, user passwords
                         if (passwordsPool_name.Count == 0)
                         {
                             // No passwords stored, nothing to save
@@ -1088,7 +1092,7 @@ namespace rpass
                             }
                         }
 
-                        linesToSave.Add(Rencrypt.EncryptInterface(Rfile.key3, Rfile.key3)); // Line last-1: Third key, checksum
+                        linesToSave.Add(Rencrypt.EncryptInterface(Rfile.key3, Rfile.key3, defaultUser.salt)); // Line last-1: Third key, checksum
                                                                                             // Create checksum
                         string checksum1 = "";
                         for (int checksumIndex1 = 0; linesToSave.Count != checksumIndex1; checksumIndex1++)
@@ -1096,7 +1100,7 @@ namespace rpass
                             checksum1 = checksum1 + linesToSave[checksumIndex1];
                         }
                         checksum1 = checksum1 + kryptonTextBoxLoginName.Text;
-                        linesToSave.Add(Rencrypt.EncryptInterface(checksum1, currentUser.masterPassword)); // Line last-1: Third key, checksum
+                        linesToSave.Add(Rencrypt.EncryptInterface(checksum1, currentUser.masterPassword, defaultUser.salt)); // Line last-1: Third key, checksum
                                                                                                            // Make a backup
                         Rfile.CreateBackup(currentUser.name);
                         // Save structure
@@ -1116,14 +1120,15 @@ namespace rpass
                     // Load structure
                     string[] linesToLoad = File.ReadAllLines(Rfile.savesPath + @"\" + kryptonTextBoxLoginName.Text + ".rcrypt");
                     // Initialize current user settings
-                    if (linesToLoad[0] == Rencrypt.EncryptInterface(Rfile.key1, Rfile.key1))
+                    if (linesToLoad[0] == Rencrypt.EncryptInterface(Rfile.key1, Rfile.key1, defaultUser.salt))
                     {
                         currentUser.masterPassword = kryptonTextBoxLoginMasterpassword.Text;
-                        if (Rencrypt.DecryptInterface(linesToLoad[2], currentUser.masterPassword, currentUser.language) == "0")
+                        currentUser.salt = Rencrypt.DecryptInterface(linesToLoad[4], currentUser.masterPassword, currentUser.language, defaultUser.salt);
+                        if (Rencrypt.DecryptInterface(linesToLoad[2], currentUser.masterPassword, currentUser.language, currentUser.salt) == "0")
                         {
                             currentUser.language = 0;
                         }
-                        else if (Rencrypt.DecryptInterface(linesToLoad[2], currentUser.masterPassword, currentUser.language) == "1")
+                        else if (Rencrypt.DecryptInterface(linesToLoad[2], currentUser.masterPassword, currentUser.language, currentUser.salt) == "1")
                         {
                             currentUser.language = 1;
                         }
@@ -1131,14 +1136,13 @@ namespace rpass
                         {
                             currentUser.language = defaultUser.language;
                         }
-                        currentUser.name = Rencrypt.DecryptInterface(linesToLoad[3], currentUser.masterPassword, currentUser.language);
-                        currentUser.salt = Rencrypt.DecryptInterface(linesToLoad[4], currentUser.masterPassword, currentUser.language);
-                        currentUser.icon = Rencrypt.DecryptInterface(linesToLoad[5], currentUser.masterPassword, currentUser.language);
-                        if (Rencrypt.DecryptInterface(linesToLoad[6], currentUser.masterPassword, currentUser.language) == "False")
+                        currentUser.name = Rencrypt.DecryptInterface(linesToLoad[3], currentUser.masterPassword, currentUser.language, currentUser.salt);
+                        currentUser.icon = Rencrypt.DecryptInterface(linesToLoad[5], currentUser.masterPassword, currentUser.language, currentUser.salt);
+                        if (Rencrypt.DecryptInterface(linesToLoad[6], currentUser.masterPassword, currentUser.language, currentUser.salt) == "False")
                         {
                             currentUser.ifDarkTheme = false;
                         }
-                        else if (Rencrypt.DecryptInterface(linesToLoad[6], currentUser.masterPassword, currentUser.language) == "True")
+                        else if (Rencrypt.DecryptInterface(linesToLoad[6], currentUser.masterPassword, currentUser.language, currentUser.salt) == "True")
                         {
                             currentUser.ifDarkTheme = true;
                         }
@@ -1148,10 +1152,10 @@ namespace rpass
                         }
                     }
                     // Load all user passwords
-                    if (linesToLoad[7] == Rencrypt.EncryptInterface(Rfile.key2, Rfile.key2))
+                    if (linesToLoad[7] == Rencrypt.EncryptInterface(Rfile.key2, Rfile.key2, defaultUser.salt))
                     {
                         // Verify if at least one password is stored
-                        if (linesToLoad[8] == Rencrypt.EncryptInterface(Rfile.key3, Rfile.key3))
+                        if (linesToLoad[8] == Rencrypt.EncryptInterface(Rfile.key3, Rfile.key3, defaultUser.salt))
                         {
                             // No passwords found
                         }
@@ -1159,9 +1163,9 @@ namespace rpass
                         {
                             // Load all found passwords
                             int poolIndex2 = 0;
-                            while (linesToLoad[8 + poolIndex2 + 0] != Rencrypt.EncryptInterface(Rfile.key3, Rfile.key3))
+                            while (linesToLoad[8 + poolIndex2 + 0] != Rencrypt.EncryptInterface(Rfile.key3, Rfile.key3, defaultUser.salt))
                             {
-                                kryptonListBox1.Items.Add(Rencrypt.DecryptInterface(linesToLoad[8 + poolIndex2 + 0], currentUser.masterPassword, currentUser.language));
+                                kryptonListBox1.Items.Add(Rencrypt.DecryptInterface(linesToLoad[8 + poolIndex2 + 0], currentUser.masterPassword, currentUser.language, currentUser.salt));
                                 passwordsPool_name.Add(linesToLoad[8 + poolIndex2 + 0]);
                                 passwordsPool_password.Add(linesToLoad[8 + poolIndex2 + 1]);
                                 passwordsPool_sitelink.Add(linesToLoad[8 + poolIndex2 + 2]);
@@ -1190,7 +1194,7 @@ namespace rpass
                         checksum2 = checksum2 + linesToChecksum2[checksumIndex2];
                     }
                     // Check and compare checksum
-                    if (Rencrypt.EncryptInterface(checksum2, kryptonTextBoxLoginMasterpassword.Text) == linesToChecksum3[linesToChecksum3.Count - 1])
+                    if (Rencrypt.EncryptInterface(checksum2, kryptonTextBoxLoginMasterpassword.Text, defaultUser.salt) == linesToChecksum3[linesToChecksum3.Count - 1])
                     {
                         // If equal, checksum correct
                         Array.Clear(linesToChecksum1, 0, linesToChecksum1.Length);
@@ -1448,8 +1452,6 @@ namespace rpass
                     kryptonButtonRPassInfo.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonRPassInfo.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonRPassInfo.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
-                    // panel anim
-                    kryptonPanelAnim.StateCommon.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     // login
                     kryptonLabelBigTitleLogin.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonLabelLoginName.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
@@ -2069,7 +2071,7 @@ namespace rpass
                         if (Rfile.UserExists(kryptonTextBoxLoginName.Text))
                         {
                             // user exists, now check password match
-                            if (Rfile.MasterpasswordMatch(Rencrypt.EncryptInterface(kryptonTextBoxLoginMasterpassword.Text, kryptonTextBoxLoginMasterpassword.Text), kryptonTextBoxLoginName.Text))
+                            if (Rfile.MasterpasswordMatch(Rencrypt.EncryptInterface(kryptonTextBoxLoginMasterpassword.Text, kryptonTextBoxLoginMasterpassword.Text, defaultUser.salt), kryptonTextBoxLoginName.Text))
                             {
                                 // checking successful, continue logging
                                 Console("error login logged");
@@ -2195,7 +2197,7 @@ namespace rpass
                         generatedPassword = generatedPassword + value.ToString();
                         value = generate.Next();
                     }
-                    generatedPassword = Rencrypt.EncryptInterface(generatedPassword, generatedPassword);
+                    generatedPassword = Rencrypt.EncryptInterface(generatedPassword, generatedPassword, currentUser.salt);
                     // Display it
                     kryptonTextBoxGenerated.Text = generatedPassword.Substring(0, currentGeneratorSize);
                     break;
@@ -2285,8 +2287,8 @@ namespace rpass
 
                     kryptonLabelLoginError.Text = Rlang.error2[currentUser.language];
                     // show
-                    pictureBox1.Location = new System.Drawing.Point(384, 70);
-                    pictureBox1.Visible = true;
+                    pictureBoxLoginIcon.Location = new System.Drawing.Point(384, 70);
+                    pictureBoxLoginIcon.Visible = true;
 
                     kryptonLabelBigTitleLogin.Location = new System.Drawing.Point(322, 160);
                     kryptonLabelBigTitleLogin.Visible = true;
@@ -2311,7 +2313,8 @@ namespace rpass
                     break;
 
                 case "interface hide auth":
-                    pictureBox1.Visible = false;
+                    pictureBoxLoginIcon.Visible = false;
+                    pictureBoxSave.Visible = false;
 
                     kryptonLabelBigTitleLogin.Visible = false;
                     kryptonLabelLoginName.Visible = false;
@@ -2333,14 +2336,12 @@ namespace rpass
                     currentAuthFailCommand = "interface show dashboard";
                     // Show it
                     Console("interface show auth");
+                    pictureBoxLoginIcon.Visible = false;
+                    pictureBoxSave.Location = new System.Drawing.Point(384, 70);
+                    pictureBoxSave.Visible = true;
                     break;
 
-                case "interface show profilepicture":
-                    pictureBoxUsergray.Location = new System.Drawing.Point(276, 56);
-                    pictureBoxUserblue.Location = new System.Drawing.Point(276, 56);
-                    pictureBoxUsergreen.Location = new System.Drawing.Point(276, 56);
-                    pictureBoxUserred.Location = new System.Drawing.Point(276, 56);
-                    pictureBoxUseryellow.Location = new System.Drawing.Point(276, 56);
+                case "interface enable profilepicture":
                     switch (currentUser.icon)
                     {
                         default:
@@ -2369,7 +2370,7 @@ namespace rpass
                     }
                     break;
 
-                case "interface hide profilepicture":
+                case "interface disable profilepicture":
                     pictureBoxUsergray.Visible = false;
                     pictureBoxUserblue.Visible = false;
                     pictureBoxUsergreen.Visible = false;

@@ -16,7 +16,7 @@ namespace rpass
     class Rlang
     {
         // Version number
-        public string version = "beta 1.00140322a"; // a = features; b = fixing; 
+        public string version = "beta 1.00140322b"; // a = features; b = fixing; 
 
         // Language set goes here
 
