@@ -11,7 +11,25 @@ using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.IO;
 using ComponentFactory.Krypton.Toolkit;
-
+//
+//RPass - Encrypted Password Manager - locally, offline, secure
+//    Copyright (C) 2022 Alexăndroae Valentin
+//
+//    This program is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    This program is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with this program.  If not, see:
+//
+//		https://www.gnu.org/licenses/
+//
 namespace rpass
 {
     public partial class Form1 : KryptonForm
@@ -19,6 +37,9 @@ namespace rpass
         public Form1()
         {
             InitializeComponent();
+            // Disable console
+            Console("interface disable console");
+            // Reset
             Console("reset");
         }
 
@@ -35,6 +56,7 @@ namespace rpass
         public bool passwordShown = false;
         public bool isSure = false;
         public bool isChecksumCorrect = false;
+        public bool isConsoleEnabled = false;
 
         public string currentNotificationTitle = "";
         public string currentNotificationContents = "";
@@ -376,7 +398,11 @@ namespace rpass
         {
             Console("interface show eula");
         }
-            // eula
+        private void kryptonButtonLoginDefaultSettings_Click(object sender, EventArgs e)
+        {
+            Console("interface show defaultsettings");
+        }
+        // eula
         private void kryptonButtonEulaCancel_Click(object sender, EventArgs e)
         {
             Console("reset");
@@ -481,6 +507,29 @@ namespace rpass
                 }
             }
         }
+                // defaultsettings
+        private void kryptonButtonDefaultSettingsBack_Click(object sender, EventArgs e)
+        {
+            Console("reset");
+        }
+        private void kryptonButtonConsoleToggle_Click(object sender, EventArgs e)
+        {
+            if (isConsoleEnabled)
+            {
+                Console("interface disable console");
+                isConsoleEnabled = false;
+            }
+            else
+            {
+                Console("interface enable console");
+                isConsoleEnabled = true;
+            }
+        }
+                // console
+        private void kryptonButtonConsoleSend_Click(object sender, EventArgs e)
+        {
+            Console(kryptonTextBoxConsoleCommand.Text);
+        }
 
         // INTERFACE
         public void InterfaceHide_All()
@@ -504,6 +553,7 @@ namespace rpass
             Console("interface hide generate");
             Console("interface hide auth");
             Console("interface hide changename");
+            Console("interface hide defaultsettings");
         }
 
         // CONSOLE
@@ -511,6 +561,10 @@ namespace rpass
         {
             switch(command)
             {
+                default:
+                    kryptonTextBoxConsoleCommand.Text = "invalid command";
+                    break;
+
                 case "quit":
                     Environment.Exit(0);
                     break;
@@ -931,6 +985,7 @@ namespace rpass
                     kryptonButtonLogin.Text = Rlang.button18login[currentUser.language];
                     kryptonButtonRegister.Text = Rlang.button19register[currentUser.language];
                     kryptonButtonLoginExit.Text = Rlang.button20loginexit[currentUser.language];
+                    kryptonButtonLoginDefaultSettings.Text = Rlang.title14defsettings[currentUser.language];
 
                     kryptonLabelLoginError.Text = Rlang.error2[currentUser.language];
                     // show
@@ -952,6 +1007,8 @@ namespace rpass
                     kryptonButtonRegister.Visible = true;
                     kryptonButtonLoginExit.Location = new System.Drawing.Point(457, 400);
                     kryptonButtonLoginExit.Visible = true;
+                    kryptonButtonLoginDefaultSettings.Location = new System.Drawing.Point(322, 502);
+                    kryptonButtonLoginDefaultSettings.Visible = true;
 
                     kryptonTextBoxLoginName.Location = new System.Drawing.Point(322, 230);
                     kryptonTextBoxLoginName.Visible = true;
@@ -976,6 +1033,7 @@ namespace rpass
                     kryptonButtonLogin.Visible = false;
                     kryptonButtonRegister.Visible = false;
                     kryptonButtonLoginExit.Visible = false;
+                    kryptonButtonLoginDefaultSettings.Visible = false;
 
                     kryptonTextBoxLoginName.Visible = false;
                     kryptonTextBoxLoginMasterpassword.Text = "";
@@ -1493,6 +1551,15 @@ namespace rpass
                     kryptonButtonLoginExit.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonLoginExit.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonLoginExit.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonLoginDefaultSettings.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonLoginDefaultSettings.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonLoginDefaultSettings.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonLoginDefaultSettings.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonLoginDefaultSettings.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonLoginDefaultSettings.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     // eula
                     kryptonLabelBigTitleEula.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
 
@@ -1655,6 +1722,63 @@ namespace rpass
                     kryptonButtonChangenameCancel.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonChangenameCancel.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonChangenameCancel.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    // defaultsettings
+                    kryptonLabelBigTitleDefaultsettings.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonLabelDefaultSettingsLang.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonLabelDefaultSettingsTheme.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonLabelDefaultSettingsOther.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+
+                    kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Content.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+
+                    kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsResetsalt.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsChangesalt.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonConsoleToggle.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonConsoleToggle.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonConsoleToggle.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonConsoleToggle.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonConsoleToggle.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonConsoleToggle.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonConsoleToggle.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonConsoleToggle.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonDefaultSettingsBack.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsBack.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsBack.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsBack.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsBack.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsBack.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    // console
+                    kryptonTextBoxConsoleCommand.StateCommon.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonTextBoxConsoleCommand.StateCommon.Content.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+
+                    kryptonButtonConsoleSend.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonConsoleSend.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonConsoleSend.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonConsoleSend.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonConsoleSend.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonConsoleSend.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonConsoleSend.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonConsoleSend.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     break;
 
                 case "error login credentials":
@@ -1680,6 +1804,7 @@ namespace rpass
                     kryptonButtonLogin.Visible = false;
                     kryptonButtonRegister.Visible = false;
                     kryptonButtonLoginExit.Visible = false;
+                    kryptonButtonLoginDefaultSettings.Visible = false;
 
                     kryptonLabelLoginMasterpassword.Visible = false;
                     kryptonTextBoxLoginMasterpassword.Visible = false;
@@ -2116,7 +2241,7 @@ namespace rpass
 
                     InterfaceHide_All();
                     // language
-                    kryptonLabelBigTitleAbout.Text = Rlang.title9about[currentUser.language] + Rlang.version;
+                    kryptonLabelBigTitleAbout.Text = Rlang.title9about[currentUser.language];
                     kryptonTextBoxAbout.Text = Rlang.minititle24about[currentUser.language] + Rlang.version;
                     // show
                     kryptonLabelBigTitleAbout.Location = new System.Drawing.Point(276, 12);
@@ -2484,7 +2609,7 @@ namespace rpass
                     break;
 
                 case "delete":
-                    // delete current account
+                    // Delete current account
                     try
                     {
                         File.Delete(Rfile.savesPath + @"\" + currentUser.name + ".rcrypt");
@@ -2492,6 +2617,76 @@ namespace rpass
                     catch
                     { }
                     Console("notification deletedaccount");
+                    break;
+
+                case "interface show defaultsettings":
+                    // hide all interfaces
+                    Console("interface disable dashbutton");
+                    Console("interface disable passwordlist");
+
+                    InterfaceHide_All();
+                    // language
+                    kryptonLabelBigTitleDefaultsettings.Text = Rlang.title14defsettings[currentUser.language];
+                    kryptonLabelDefaultSettingsLang.Text = Rlang.minititle41deflang[currentUser.language];
+                    kryptonLabelDefaultSettingsTheme.Text = Rlang.minititle42deftheme[currentUser.language];
+                    kryptonLabelDefaultSettingsOther.Text = Rlang.minititle43defother[currentUser.language];
+                    kryptonLabelDefaultSettingsWarn.Text = Rlang.minititle44defwarn[currentUser.language];
+                    
+                    kryptonButtonDefaultSettingsResetsalt.Text = Rlang.button26resetsalt[currentUser.language];
+                    kryptonButtonDefaultSettingsChangesalt.Text = Rlang.button27changesalt[currentUser.language];
+                    kryptonButtonConsoleToggle.Text = Rlang.button28toggleconsole[currentUser.language];
+                    kryptonButtonDefaultSettingsBack.Text = Rlang.button29defsettingsback[currentUser.language];
+                    // show
+                    kryptonLabelBigTitleDefaultsettings.Location = new System.Drawing.Point(276, 12);
+                    kryptonLabelBigTitleDefaultsettings.Visible = true;
+                    kryptonLabelDefaultSettingsLang.Location = new System.Drawing.Point(276, 56);
+                    kryptonLabelDefaultSettingsLang.Visible = true;
+                    kryptonLabelDefaultSettingsTheme.Location = new System.Drawing.Point(276, 117);
+                    kryptonLabelDefaultSettingsTheme.Visible = true;
+                    kryptonLabelDefaultSettingsOther.Location = new System.Drawing.Point(276, 267);
+                    kryptonLabelDefaultSettingsOther.Visible = true;
+                    kryptonLabelDefaultSettingsWarn.Location = new System.Drawing.Point(276, 301);
+                    kryptonLabelDefaultSettingsWarn.Visible = true;
+
+                    kryptonComboBoxLoginLangSelector.Location = new System.Drawing.Point(276, 82);
+                    kryptonComboBoxLoginLangSelector.Visible = true;
+                    kryptonComboBoxDefaultSettingsIfDarkTheme.Location = new System.Drawing.Point(276, 143);
+                    kryptonComboBoxDefaultSettingsIfDarkTheme.Visible = true;
+
+                    kryptonButtonDefaultSettingsResetsalt.Location = new System.Drawing.Point(276, 327);
+                    kryptonButtonDefaultSettingsResetsalt.Visible = true;
+                    kryptonButtonDefaultSettingsChangesalt.Location = new System.Drawing.Point(276, 366);
+                    kryptonButtonDefaultSettingsChangesalt.Visible = true;
+                    kryptonButtonConsoleToggle.Location = new System.Drawing.Point(276, 405);
+                    kryptonButtonConsoleToggle.Visible = true;
+                    kryptonButtonDefaultSettingsBack.Location = new System.Drawing.Point(0, 12);
+                    kryptonButtonDefaultSettingsBack.Visible = true;
+                    break;
+
+                case "interface hide defaultsettings":
+                    kryptonLabelBigTitleDefaultsettings.Visible = false;
+                    kryptonLabelDefaultSettingsLang.Visible = false;
+                    kryptonLabelDefaultSettingsTheme.Visible = false;
+                    kryptonLabelDefaultSettingsOther.Visible = false;
+                    kryptonLabelDefaultSettingsWarn.Visible = false;
+
+                    kryptonComboBoxLoginLangSelector.Visible = false;
+                    kryptonComboBoxDefaultSettingsIfDarkTheme.Visible = false;
+
+                    kryptonButtonDefaultSettingsResetsalt.Visible = false;
+                    kryptonButtonDefaultSettingsChangesalt.Visible = false;
+                    kryptonButtonConsoleToggle.Visible = false;
+                    kryptonButtonDefaultSettingsBack.Visible = false;
+                    break;
+
+                case "interface enable console":
+                    kryptonTextBoxConsoleCommand.Visible = true;
+                    kryptonButtonConsoleSend.Visible = true;
+                    break;
+
+                case "interface disable console":
+                    kryptonTextBoxConsoleCommand.Visible = false;
+                    kryptonButtonConsoleSend.Visible = false;
                     break;
             }
         }

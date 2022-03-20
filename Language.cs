@@ -10,13 +10,31 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.IO;
-
+//
+//RPass - Encrypted Password Manager - locally, offline, secure
+//    Copyright (C) 2022 Alexăndroae Valentin
+//
+//    This program is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    This program is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with this program.  If not, see:
+//
+//		https://www.gnu.org/licenses/
+//
 namespace rpass
 {
     class Rlang
     {
         // Version number
-        public string version = "beta 1.00140322b"; // a = features; b = fixing; 
+        public string version = "beta 1.00200322a"; // a = features; b = fixing;
 
         // Language set goes here
 
@@ -95,8 +113,8 @@ namespace rpass
         };
         public string[] title5sett = new string[2] // title5 sett
         {
-            "Settings",
-            "Setări"
+            "User settings",
+            "Setări utilizator"
         };
         public string[] title6login = new string[2] // title6 login
         {
@@ -137,6 +155,11 @@ namespace rpass
         {
             "Change your name",
             "Schimbă-ți numele"
+        };
+        public string[] title14defsettings = new string[2] // title13 default settings
+        {
+            "Default settings",
+            "Setări implicite"
         };
         // minititles
         public string[] minititle1passtobesaved = new string[2] // minititle1 password to be saved
@@ -226,11 +249,56 @@ namespace rpass
             "Language/Limbă:",
             "Language/Limbă:"
         };
+        // EULA
         public string[] minititle18eula = new string[2] // minititle18 eula
         {
-            "eula placeholder\r\n",
-            "eula placeholder\r\n"
+            "Agreeing to the license / Continuing/ Using the program implies" +
+            "\r\nyou're accepting this terms and conditions in his entirety as follows:" +
+            "\r\n" +
+            "\r\nUsing this software does not guarantee the security of your data in its entirety" +
+            "\r\n" +
+            "\r\n   This program is free software: you can redistribute it and/or modify" +
+            "\r\nit under the terms of the GNU General Public License as published by" +
+            "\r\nthe Free Software Foundation, either version 3 of the License, or" +
+            "\r\n(at your option) any later version." +
+            "\r\n" +
+            "\r\n   This program is distributed in the hope that it will be useful," +
+            "\r\nbut WITHOUT ANY WARRANTY; without even the implied warranty of" +
+            "\r\nMERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the" +
+            "\r\nGNU General Public License for more details." +
+            "\r\n" +
+            "\r\n   You should have received a copy of the GNU General Public License" +
+            "\r\nalong with this program.  If not, see:" +
+            "\r\n" +
+            "\r\n		https://www.gnu.org/licenses/" +
+            "\r\n" +
+            "\r\nRPass - Encrypted Password Manager - locally, offline, secure" +
+            "\r\nCopyright (C) 2022 Alexăndroae Valentin-Grigore",
+
+            "Acceptarea licenței / Continuarea / Utilizarea programului implică" +
+            "\r\nacceptarea pe deplin a acești termeni și condiții, după cum urmează:" +
+            "\r\n" +
+            "\r\nUtilizarea acestui software nu garantează securitatea datelor dumneavoastră în întregime" +
+            "\r\n" +
+            "\r\n   Acest program este software liber: îl puteți redistribui și/sau modifica pe" +
+            "\r\nacesta în conformitate cu termenii Licenței Publice Generale GNU publicate de" +
+            "\r\nFree Software Foundation, fie versiunea 3 a Licenței, fie" +
+            "\r\n(la alegerea dvs.) orice versiune ulterioară." +
+            "\r\n" +
+            "\r\n   Acest program este distribuit în speranța că va fi util," +
+            "\r\ndar FĂRĂ NICIO GARANȚIE; fără nici măcar garanția implicită de" +
+            "\r\nVANTABILITATE sau DE A SE CONFORMA UNUI UN ANUMIT SCOP. Vezi" +
+            "\r\nLicența Publică Generală GNU pentru mai multe detalii." +
+            "\r\n" +
+            "\r\n   Ar fi trebuit să primiți o copie a Licenței Publice Generale GNU" +
+            "\r\nîmpreună cu acest program. Daca nu, vezi:" +
+            "\r\n" +
+            "\r\n		https://www.gnu.org/licenses/" +
+            "\r\n" +
+            "\r\nRPass - Manager de parole criptate - local, offline, securizat" +
+            "\r\nDrepturi de autor (C) 2022 Alexăndroae Valentin"
         };
+        // END OF EULA
         public string[] minititle19newname = new string[2] // minititle19 newname
         {
             "Enter a new name:",
@@ -256,15 +324,61 @@ namespace rpass
             "*All forms are required",
             "*Toate câmpurile sunt necesare"
         };
+        // ABOUT
         public string[] minititle24about = new string[2] // minititle24 about
         {
-            "about placeholder" +
+            "RPass - Encrypted Password Manager - locally, offline, secure" +
+            "\r\nCopyright (C) 2022 Alexăndroae Valentin-Grigore" +
+            "\r\nABOUT:" +
+            "\r\n   This is a software used to manage passwords for various sites and places," +
+            "\r\nsaving them locally, away from the internet, encrypted with AES-256," +
+            "\r\nprotected by a master password of choice." +
+            "\r\n" +
+            "\r\nLICENSE:" +
+            "\r\n   This program is free software: you can redistribute it and/or modify" +
+            "\r\nit under the terms of the GNU General Public License as published by" +
+            "\r\nthe Free Software Foundation, either version 3 of the License, or" +
+            "\r\n(at your option) any later version." +
+            "\r\n" +
+            "\r\n   You should have received a copy of the GNU General Public License" +
+            "\r\nalong with this program.  If not, see:" +
+            "\r\n" +
+            "\r\n		https://www.gnu.org/licenses/" +
+            "\r\n" +
+            "\r\nFOLLOW THE PROJECT:" +
+            "\r\n   All about the project, including updated versions, can be found here:" +
+            "\r\n" +
+            "\r\n		https://github.com/r13010/RPass" +
             "\r\n" +
             "\r\nVersion ",
-            "about placeholder" +
+
+            "RPass - Manager de parole criptate - local, offline, securizat" +
+            "\r\nDrepturi de autor (C) 2022 Alexăndroae Valentin" +
+            "\r\n" +
+            "\r\nDESPRE:" +
+            "\r\n   Acesta este un software folosit pentru a gestiona parolele pentru diverse" +
+            "\r\nsite-uri și locuri, salvându-le local, departe de internet, criptat cu AES-256," +
+            "\r\nprotejat de o parolă principală la alegere." +
+            "\r\n" +
+            "\r\nLICENȚĂ:" +
+            "\r\n   Acest program este software liber: îl puteți redistribui și/sau modifica pe" +
+            "\r\nacesta în conformitate cu termenii Licenței Publice Generale GNU publicate de" +
+            "\r\nFree Software Foundation, fie versiunea 3 a Licenței, fie" +
+            "\r\n(la alegerea dvs.) orice versiune ulterioară." +
+            "\r\n" +
+            "\r\n   Ar fi trebuit să primiți o copie a Licenței Publice Generale GNU" +
+            "\r\nîmpreună cu acest program. Daca nu, vezi:" +
+            "\r\n" +
+            "\r\n		https://www.gnu.org/licenses/" +
+            "\r\n" +
+            "\r\nURMĂRIȚI PROIECTUL:" +
+            "\r\n   Totul despre proiect, inclusiv versiunile actualizate, pot fi găsite aici:" +
+            "\r\n" +
+            "\r\n		https://github.com/r13010/RPass" +
             "\r\n" +
             "\r\nVersiune "
         };
+        // END OF ABOUT
         public string[] minititle25notif = new string[2] // minititle25 notif
         {
             "[contents]",
@@ -346,10 +460,30 @@ namespace rpass
             "Deleted account",
             "Cont șters"
         };
-        public string[] minititle40deletedaccount = new string[2] // minititle38 delete account contents
+        public string[] minititle40deletedaccount = new string[2] // minititle40 delete account contents
         {
             "This account was deleted.",
             "Acest cont a fost șters."
+        };
+        public string[] minititle41deflang = new string[2] // minititle41 defsettings lang
+        {
+            "Default language: (when you open RPass)",
+            "Limba implicită: (când deschideți RPass)"
+        };
+        public string[] minititle42deftheme = new string[2] // minititle42 defsettings theme
+        {
+            "Default theme: (when you open RPass)",
+            "Tema implicită: (când deschideți RPass)"
+        };
+        public string[] minititle43defother = new string[2] // minititle43 defsettings theme
+        {
+            "Other settings",
+            "Alte setări"
+        };
+        public string[] minititle44defwarn = new string[2] // minititle44 defsettings theme
+        {
+            "!! DON'T USE UNLESS YOU KNOW WHAT ARE YOU DOING !!",
+            "!! NU UTILIZAȚI DECĂ DACĂ ȘTIȚI CE FACEȚI !!"
         };
         //buttons
         public string[] button1save = new string[2] // button1 save
@@ -476,6 +610,26 @@ namespace rpass
         {
             "Continue",
             "Continuă"
+        };
+        public string[] button26resetsalt = new string[2] // minititle26 reset salt
+        {
+            "Reset to default salt",
+            "Resetați la salt-ul implicit"
+        };
+        public string[] button27changesalt = new string[2] // minititle27 change salt
+        {
+            "Change default salt",
+            "Schimbați salt-ul implicit"
+        };
+        public string[] button28toggleconsole = new string[2] // minititle27 change salt
+        {
+            "TOGGLE CONSOLE",
+            "COMUTĂ CONSOLĂ"
+        };
+        public string[] button29defsettingsback = new string[2] // button29 defsettings back
+        {
+            "← Back",
+            "← Înapoi"
         };
     }
 }

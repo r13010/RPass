@@ -1,0 +1,65 @@
+Agreeing to the license/Continuing/Using the program implies
+you're accepting this terms and conditions in his entirety as follows:
+
+Using this software does not guarantee the security of your data in its entirety
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see:
+
+		https://www.gnu.org/licenses/
+
+RPass - Encrypted Password Manager - locally, offline, secure
+    Copyright (C) 2022 Alexăndroae Valentin
+
+//
+
+Acceptarea licenței / Continuarea / Utilizarea programului implică
+acceptarea pe deplin a acești termeni și condiții, după cum urmează:
+
+     Acest program este software liber: îl puteți redistribui și/sau modifica pe
+     acesta în conformitate cu termenii Licenței Publice Generale GNU publicate de
+     Free Software Foundation, fie versiunea 3 a Licenței, fie
+     (la alegerea dvs.) orice versiune ulterioară.
+
+     Acest program este distribuit în speranța că va fi util,
+     dar FĂRĂ NICIO GARANȚIE; fără nici măcar garanția implicită de
+     VANTABILITATE sau DE A SE CONFORMA UNUI UN ANUMIT SCOP. Vezi
+     Licența Publică Generală GNU pentru mai multe detalii.
+
+     Ar fi trebuit să primiți o copie a Licenței Publice Generale GNU
+     împreună cu acest program. Daca nu, vezi:
+
+		https://www.gnu.org/licenses/
+
+RPass - Manager de parole criptate - local, offline, securizat
+     Drepturi de autor (C) 2022 Alexăndroae Valentin
+
+//
+//RPass - Encrypted Password Manager - locally, offline, secure
+//    Copyright (C) 2022 Alexăndroae Valentin
+//
+//    This program is free software: you can redistribute it and/or modify
+//    it under the terms of the GNU General Public License as published by
+//    the Free Software Foundation, either version 3 of the License, or
+//    (at your option) any later version.
+//
+//    This program is distributed in the hope that it will be useful,
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//    GNU General Public License for more details.
+//
+//    You should have received a copy of the GNU General Public License
+//    along with this program.  If not, see:
+//
+//		https://www.gnu.org/licenses/
+//

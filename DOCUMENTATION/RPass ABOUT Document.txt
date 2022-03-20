@@ -1,0 +1,49 @@
+RPass - Encrypted Password Manager - locally, offline, secure
+    Copyright (C) 2022 Alexăndroae Valentin
+
+ABOUT:
+    This is a software used to manage passwords for various sites and places,
+    saving them locally, away from the internet, encrypted with AES-256,
+    protected by a master password of choice
+
+LICENSE:
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see:
+
+		https://www.gnu.org/licenses/
+
+FOLLOW THE PROJECT:
+    All about the project, including updated versions, can be found here:
+
+		https://github.com/r13010/RPass
+
+//
+
+RPass - Manager de parole criptate - local, offline, securizat
+     Drepturi de autor (C) 2022 Alexăndroae Valentin
+
+DESPRE:
+    Acesta este un software folosit pentru a gestiona parolele pentru diverse
+    site-uri și locuri, salvându-le local, departe de internet, criptat cu AES-256,
+    protejat de o parolă principală la alegere.
+
+LICENȚĂ:
+     Acest program este software liber: îl puteți redistribui și/sau modifica pe
+     acesta în conformitate cu termenii Licenței Publice Generale GNU publicate de
+     Free Software Foundation, fie versiunea 3 a Licenței, fie
+     (la alegerea dvs.) orice versiune ulterioară.
+
+     Ar fi trebuit să primiți o copie a Licenței Publice Generale GNU
+     împreună cu acest program. Daca nu, vezi:
+
+		https://www.gnu.org/licenses/
+	
+URMĂRIȚI PROIECTUL:
+    Totul despre proiect, inclusiv versiunile actualizate, pot fi găsite aici:
+
+		https://github.com/r13010/RPass
