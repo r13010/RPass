@@ -34,7 +34,7 @@ namespace rpass
     class Rlang
     {
         // Version number
-        public string version = "beta 1.00200322a"; // a = features; b = fixing;
+        public string version = "beta 1.00210322a"; // a = features; b = fixing;
 
         // Language set goes here
 
@@ -483,7 +483,17 @@ namespace rpass
         public string[] minititle44defwarn = new string[2] // minititle44 defsettings theme
         {
             "!! DON'T USE UNLESS YOU KNOW WHAT ARE YOU DOING !!",
-            "!! NU UTILIZAȚI DECĂ DACĂ ȘTIȚI CE FACEȚI !!"
+            "!! NU UTILIZAȚI DECÂT DACĂ ȘTIȚI CE FACEȚI !!"
+        };
+        public string[] minititle45notifsaltreset = new string[2] // minititle45 notification salt reseted
+        {
+            "The salt was reseted",
+            "Salt-ul a fost resetat"
+        };
+        public string[] minititle46notifsaltreset = new string[2] // minititle46 notification salt reseted
+        {
+            "The salt was reseted to it's default value.",
+            "Salt-ul a fost resetat la valoarea implicită."
         };
         //buttons
         public string[] button1save = new string[2] // button1 save
@@ -630,6 +640,21 @@ namespace rpass
         {
             "← Back",
             "← Înapoi"
+        };
+        public string[] button30opensaves = new string[2] // button30 open saves
+        {
+            "Open saves",
+            "Deschide salvările"
+        };
+        public string[] button31openbackups = new string[2] // button31 open backups
+        {
+            "Open backups",
+            "Deschide backup-urile"
+        };
+        public string[] button32globalreset = new string[2] // button32 global reset
+        {
+            "Global reset",
+            "Resetare globală"
         };
     }
 }

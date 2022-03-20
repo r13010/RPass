@@ -19,3 +19,7 @@ C:\Users\TheR\Desktop\rpass\rpass\obj\Debug\rpass.csproj.CopyComplete
 C:\Users\TheR\Desktop\rpass\rpass\bin\Debug\ComponentFactory.Krypton.Docking.dll
 C:\Users\TheR\Desktop\rpass\rpass\bin\Debug\ComponentFactory.Krypton.Docking.pdb
 C:\Users\TheR\Desktop\rpass\rpass\obj\Debug\rpass.Form1.resources
+C:\Users\TheR\Desktop\rpass\rpass\bin\Debug\rpass.exe.manifest
+C:\Users\TheR\Desktop\rpass\rpass\bin\Debug\rpass.application
+C:\Users\TheR\Desktop\rpass\rpass\obj\Debug\rpass.exe.manifest
+C:\Users\TheR\Desktop\rpass\rpass\obj\Debug\rpass.application

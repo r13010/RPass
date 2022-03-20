@@ -52,11 +52,12 @@ namespace rpass
         // Creating user sessions
         Rdefaults.user defaultUser;
         Rdefaults.user currentUser;
-        public List<string> linesToSave = new List<string>();
+
         public bool passwordShown = false;
         public bool isSure = false;
         public bool isChecksumCorrect = false;
         public bool isConsoleEnabled = false;
+        public bool isConsoleToggleEnabled = false;
 
         public string currentNotificationTitle = "";
         public string currentNotificationContents = "";
@@ -385,6 +386,7 @@ namespace rpass
         {
             currentUser.language = kryptonComboBoxLoginLangSelector.SelectedIndex;
             Console("interface show login");
+            Console("save settings");
         }
         private void kryptonButtonLogin_Click(object sender, EventArgs e)
         {
@@ -503,7 +505,7 @@ namespace rpass
                     { }
                     currentUser.name = kryptonTextBoxChangename.Text;
                     kryptonTextBoxLoginName.Text = kryptonTextBoxChangename.Text;
-                    Console("save");
+                    Console("save user");
                 }
             }
         }
@@ -525,10 +527,54 @@ namespace rpass
                 isConsoleEnabled = true;
             }
         }
-                // console
+        private void kryptonComboBoxDefaultSettingsIfDarkTheme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (kryptonComboBoxDefaultSettingsIfDarkTheme.SelectedIndex == 0)
+            {
+                currentUser.ifDarkTheme = true;
+            }
+            else if (kryptonComboBoxDefaultSettingsIfDarkTheme.SelectedIndex == 1)
+            {
+                currentUser.ifDarkTheme = false;
+            }
+            // Reinit interface
+            InterfaceHide_All();
+            Console("interface theme");
+            Console("interface show defaultsettings");
+            Console("save settings");
+        }
+        private void kryptonButtonDefaultSettingsResetsalt_Click(object sender, EventArgs e)
+        {
+            defaultUser.salt = Rdefaults.defaultSalt;
+            Console("save settings");
+            Console("notification saltreset");
+        }
+        private void kryptonButtonDefaultSettingsOpensaves_Click(object sender, EventArgs e)
+        {
+            Console("open savesfolder");
+        }
+        private void kryptonButtonDefaultSettingsReset_Click(object sender, EventArgs e)
+        {
+            // Reset
+            Console("load defaultsettings");
+            kryptonTextBoxLoginName.Text = "";
+            defaultUser.salt = Rdefaults.defaultSalt;
+            Console("save settings");
+            // Restart
+            Console("reset");
+        }
+        private void kryptonButtonDefaultSettingsChangesalt_Click(object sender, EventArgs e)
+        {
+            //change salt
+        }
+        // console
         private void kryptonButtonConsoleSend_Click(object sender, EventArgs e)
         {
             Console(kryptonTextBoxConsoleCommand.Text);
+        }
+        private void kryptonButtonDefaultSettingsOpenbackups_Click(object sender, EventArgs e)
+        {
+            Console("open backupsfolder");
         }
 
         // INTERFACE
@@ -559,7 +605,7 @@ namespace rpass
         // CONSOLE
         public void Console(string command)
         {
-            switch(command)
+            switch (command)
             {
                 default:
                     kryptonTextBoxConsoleCommand.Text = "invalid command";
@@ -1087,12 +1133,7 @@ namespace rpass
                     defaultUser.icon = Rdefaults.defaultIcon;
                     defaultUser.ifDarkTheme = Rdefaults.defaultIfDarkTheme;
                     // Initialize current user settings
-                    currentUser.masterPassword = defaultUser.masterPassword;
-                    currentUser.language = defaultUser.language;
-                    currentUser.name = defaultUser.name;
-                    currentUser.salt = defaultUser.salt;
-                    currentUser.icon = defaultUser.icon;
-                    currentUser.ifDarkTheme = defaultUser.ifDarkTheme;
+                    Console("load settings");
                     // Clear password pool
                     kryptonListBox1.Items.Clear();
                     passwordsPool_name.Clear();
@@ -1110,8 +1151,8 @@ namespace rpass
                     Rfile.CreatePaths();
                     break;
 
-                case "save":
-                    if(currentUser.name == "root")
+                case "save user":
+                    if (currentUser.name == "root")
                     {
                         // Can't save root
                         Console("notification rootsave");
@@ -1120,6 +1161,7 @@ namespace rpass
                     {
                         // SAVE USER
                         // Create structure
+                        List<string> linesToSave = new List<string>();
                         linesToSave.Clear();
 
                         linesToSave.Add(Rencrypt.EncryptInterface(Rfile.key1, Rfile.key1, defaultUser.salt)); // Line 1: First key, user info
@@ -1151,7 +1193,7 @@ namespace rpass
                         }
 
                         linesToSave.Add(Rencrypt.EncryptInterface(Rfile.key3, Rfile.key3, defaultUser.salt)); // Line last-1: Third key, checksum
-                                                                                            // Create checksum
+                                                                                                              // Create checksum
                         string checksum1 = "";
                         for (int checksumIndex1 = 0; linesToSave.Count != checksumIndex1; checksumIndex1++)
                         {
@@ -1159,7 +1201,7 @@ namespace rpass
                         }
                         checksum1 = checksum1 + kryptonTextBoxLoginName.Text;
                         linesToSave.Add(Rencrypt.EncryptInterface(checksum1, currentUser.masterPassword, defaultUser.salt)); // Line last-1: Third key, checksum
-                                                                                                           // Make a backup
+                                                                                                                             // Make a backup
                         Rfile.CreateBackup(currentUser.name);
                         // Save structure
                         try
@@ -1174,7 +1216,7 @@ namespace rpass
                     }
                     break;
 
-                case "load":
+                case "load user":
                     // Load structure
                     string[] linesToLoad = File.ReadAllLines(Rfile.savesPath + @"\" + kryptonTextBoxLoginName.Text + ".rcrypt");
                     // Initialize current user settings
@@ -1767,6 +1809,33 @@ namespace rpass
                     kryptonButtonDefaultSettingsBack.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonDefaultSettingsBack.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsOpenbackups.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsOpensaves.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonDefaultSettingsReset.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsReset.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsReset.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsReset.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonDefaultSettingsReset.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonDefaultSettingsReset.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     // console
                     kryptonTextBoxConsoleCommand.StateCommon.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     kryptonTextBoxConsoleCommand.StateCommon.Content.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
@@ -2140,7 +2209,7 @@ namespace rpass
                                     currentUser.ifDarkTheme = false;
 
                                     // Save user
-                                    Console("save");
+                                    Console("save user");
                                     Console("reset");
                                 }
                                 else
@@ -2208,7 +2277,7 @@ namespace rpass
                                 if (isChecksumCorrect == true)
                                 {
                                     // set current user settings and load password pool
-                                    Console("load");
+                                    Console("load user");
                                     // show dashboard
                                     InterfaceHide_All();
                                     Console("interface theme");
@@ -2263,7 +2332,7 @@ namespace rpass
                     InterfaceHide_All();
                     // language
                     kryptonButtonNotification.Text = Rlang.button23notification[currentUser.language];
-                    
+
                     kryptonLabelBigTitleNotification.Text = currentNotificationTitle;
                     kryptonLabelNotificationContents.Text = currentNotificationContents;
                     // reset notification text
@@ -2457,7 +2526,7 @@ namespace rpass
 
                 case "auth save":
                     // Set auth
-                    currentAuthCommand = "save";
+                    currentAuthCommand = "save user";
                     currentAuthFailCommand = "interface show dashboard";
                     // Show it
                     Console("interface show auth");
@@ -2631,11 +2700,14 @@ namespace rpass
                     kryptonLabelDefaultSettingsTheme.Text = Rlang.minititle42deftheme[currentUser.language];
                     kryptonLabelDefaultSettingsOther.Text = Rlang.minititle43defother[currentUser.language];
                     kryptonLabelDefaultSettingsWarn.Text = Rlang.minititle44defwarn[currentUser.language];
-                    
+
                     kryptonButtonDefaultSettingsResetsalt.Text = Rlang.button26resetsalt[currentUser.language];
                     kryptonButtonDefaultSettingsChangesalt.Text = Rlang.button27changesalt[currentUser.language];
                     kryptonButtonConsoleToggle.Text = Rlang.button28toggleconsole[currentUser.language];
                     kryptonButtonDefaultSettingsBack.Text = Rlang.button29defsettingsback[currentUser.language];
+                    kryptonButtonDefaultSettingsOpensaves.Text = Rlang.button30opensaves[currentUser.language];
+                    kryptonButtonDefaultSettingsOpenbackups.Text = Rlang.button31openbackups[currentUser.language];
+                    kryptonButtonDefaultSettingsReset.Text = Rlang.button32globalreset[currentUser.language];
                     // show
                     kryptonLabelBigTitleDefaultsettings.Location = new System.Drawing.Point(276, 12);
                     kryptonLabelBigTitleDefaultsettings.Visible = true;
@@ -2658,9 +2730,18 @@ namespace rpass
                     kryptonButtonDefaultSettingsChangesalt.Location = new System.Drawing.Point(276, 366);
                     kryptonButtonDefaultSettingsChangesalt.Visible = true;
                     kryptonButtonConsoleToggle.Location = new System.Drawing.Point(276, 405);
-                    kryptonButtonConsoleToggle.Visible = true;
+                    if (isConsoleToggleEnabled)
+                    {
+                        kryptonButtonConsoleToggle.Visible = true;
+                    }
                     kryptonButtonDefaultSettingsBack.Location = new System.Drawing.Point(0, 12);
                     kryptonButtonDefaultSettingsBack.Visible = true;
+                    kryptonButtonDefaultSettingsOpensaves.Location = new System.Drawing.Point(276, 178);
+                    kryptonButtonDefaultSettingsOpensaves.Visible = true;
+                    kryptonButtonDefaultSettingsOpenbackups.Location = new System.Drawing.Point(276, 217);
+                    kryptonButtonDefaultSettingsOpenbackups.Visible = true;
+                    kryptonButtonDefaultSettingsReset.Location = new System.Drawing.Point(276, 444);
+                    kryptonButtonDefaultSettingsReset.Visible = true;
                     break;
 
                 case "interface hide defaultsettings":
@@ -2677,16 +2758,155 @@ namespace rpass
                     kryptonButtonDefaultSettingsChangesalt.Visible = false;
                     kryptonButtonConsoleToggle.Visible = false;
                     kryptonButtonDefaultSettingsBack.Visible = false;
+                    kryptonButtonDefaultSettingsOpensaves.Visible = false;
+                    kryptonButtonDefaultSettingsOpenbackups.Visible = false;
+                    kryptonButtonDefaultSettingsReset.Visible = false;
                     break;
 
                 case "interface enable console":
+                    kryptonTextBoxConsoleCommand.Location = new System.Drawing.Point(588, 12);
                     kryptonTextBoxConsoleCommand.Visible = true;
+                    kryptonButtonConsoleSend.Location = new System.Drawing.Point(842, 12);
                     kryptonButtonConsoleSend.Visible = true;
                     break;
 
                 case "interface disable console":
                     kryptonTextBoxConsoleCommand.Visible = false;
                     kryptonButtonConsoleSend.Visible = false;
+                    break;
+
+                case "load settings":
+                    Console("load defaultsettings");
+                    if (File.Exists(Rfile.defaultPath + @"\" + "settings.rpass"))
+                    {
+                        try
+                        {
+                            // Load structure
+                            string[] linesToSett1 = File.ReadAllLines(Rfile.defaultPath + @"\" + "settings.rpass");
+                            List<string> linesToSett2 = new List<string>(linesToSett1);
+                            Array.Clear(linesToSett1, 0, linesToSett1.Length);
+                            // Initialize current user settings
+                            // language
+                            currentUser.language = Convert.ToInt32(linesToSett2[0]);
+                            // theme
+                            if (linesToSett2[1] == "False")
+                            {
+                                currentUser.ifDarkTheme = false;
+                            }
+                            else if (linesToSett2[1] == "True")
+                            {
+                                currentUser.ifDarkTheme = true;
+                            }
+                            else
+                            {
+                                currentUser.ifDarkTheme = defaultUser.ifDarkTheme;
+                            }
+                            // salt
+                            if (int.TryParse(linesToSett2[2], out _) && linesToSett2[2].Length == 8)
+                            {
+                                defaultUser.salt = linesToSett2[2];
+                            }
+                            else
+                            {
+                                defaultUser.salt = Rdefaults.defaultSalt;
+                            }
+                            // console
+                            if (linesToSett2[3] == "2")
+                            {
+                                Console("interface enable console");
+                                isConsoleToggleEnabled = true;
+                            }
+                            else if (linesToSett2[3] == "1")
+                            {
+                                isConsoleToggleEnabled = true;
+                            }
+                            else
+                            {
+                                Console("interface disable console");
+                                isConsoleToggleEnabled = false;
+                            }
+                            linesToSett2.Clear();
+                        }
+                        catch
+                        {
+                            Console("load defaultsettings");
+                        }
+
+                    }
+                    else
+                    {
+                        Console("load defaultsettings");
+                    }
+                    break;
+
+                case "load defaultsettings":
+                    currentUser.masterPassword = defaultUser.masterPassword;
+                    currentUser.language = defaultUser.language;
+                    currentUser.name = defaultUser.name;
+                    currentUser.salt = defaultUser.salt;
+                    currentUser.icon = defaultUser.icon;
+                    currentUser.ifDarkTheme = defaultUser.ifDarkTheme;
+                    break;
+
+                case "save settings":
+                    // Create structure
+                    List<string> linesToSett3 = new List<string>();
+                    linesToSett3.Clear();
+
+                    linesToSett3.Add(currentUser.language.ToString()); // Line 1: Default language
+                    linesToSett3.Add(currentUser.ifDarkTheme.ToString()); // Line 2: Default theme
+                    linesToSett3.Add(defaultUser.salt.ToString()); // Line 3: Default salt
+                    linesToSett3.Add("0"); // Line 4: Console // usually turned off
+
+                    linesToSett3.Add("");
+                    linesToSett3.Add("RPASS SETTINGS: THESE SETTINGS NEED TO BE IN THIS FORMAT:");
+                    linesToSett3.Add("Line 1: Default language // DEFAULT VALUE = 0");
+                    linesToSett3.Add("Line 2: Default theme // DEFAULT VALUE = False");
+                    linesToSett3.Add("Line 3: Default salt // DEFAULT VALUE = empty");
+                    linesToSett3.Add("Line 4: Console // DEFAULT VALUE = 0");
+                    // Save structure
+                    try
+                    {
+                        File.WriteAllLines(Rfile.defaultPath + @"\" + "settings.rpass", linesToSett3);
+                    }
+                    catch
+                    { }
+                    break;
+
+                case "notification saltreset":
+                    // Set notification
+                    currentNotificationTitle = Rlang.minititle45notifsaltreset[currentUser.language];
+                    currentNotificationContents = Rlang.minititle46notifsaltreset[currentUser.language];
+                    currentNotificationCommand = "reset";
+                    // Show it
+                    Console("interface show notification");
+                    break;
+
+                case "open savesfolder":
+                    try
+                    {
+                        System.Diagnostics.Process.Start("explorer.exe", Rfile.savesPath);
+                    }
+                    catch
+                    { }
+                    break;
+
+                case "open defaultfolder":
+                    try
+                    {
+                        System.Diagnostics.Process.Start("explorer.exe", Rfile.defaultPath);
+                    }
+                    catch
+                    { }
+                    break;
+
+                case "open backupsfolder":
+                    try
+                    {
+                        System.Diagnostics.Process.Start("explorer.exe", Rfile.backupsPath);
+                    }
+                    catch
+                    { }
                     break;
             }
         }

@@ -37,11 +37,11 @@ namespace rpass
 
         // User session defaults
         public const string defaultMasterPassword = "root"; // default master password is root
-        public const int defaultLanguage = 1; // en = 0 or ro = 1, default is en
+        public const int defaultLanguage = 0; // en = 0 or ro = 1, default is en
         public const string defaultUserName = "root"; // default name is root
         public const string defaultSalt = "20031104"; // minimum 8 bytes req for salt
         public const string defaultIcon = "gray"; // default icon
-        public const bool defaultIfDarkTheme = true; // default theme type is white
+        public const bool defaultIfDarkTheme = false; // default theme type is white
         
         // User data structures
         public struct user
