@@ -251,7 +251,18 @@ namespace rpass
 
             Console("interface show editpassword");
         }
-            // edit password
+        private void kryptonButtonInfopassOpenLink_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start(Rencrypt.DecryptInterface(passwordsPool_sitelink[kryptonListBox1.SelectedIndex], currentUser.masterPassword, currentUser.language, currentUser.salt));
+            }
+            catch
+            {
+                kryptonTextBoxPasswordInfoshow.Text = Rlang.minititle49invalidlink[currentUser.language];
+            }
+        }
+        // edit password
         private void kryptonButtonEditpassSave_Click(object sender, EventArgs e)
         {
             if (kryptonTextBoxPassword.Text != "" &&
@@ -404,7 +415,7 @@ namespace rpass
         {
             Console("interface show defaultsettings");
         }
-        // eula
+            // eula
         private void kryptonButtonEulaCancel_Click(object sender, EventArgs e)
         {
             Console("reset");
@@ -509,7 +520,7 @@ namespace rpass
                 }
             }
         }
-                // defaultsettings
+            // defaultsettings
         private void kryptonButtonDefaultSettingsBack_Click(object sender, EventArgs e)
         {
             Console("reset");
@@ -565,7 +576,7 @@ namespace rpass
         }
         private void kryptonButtonDefaultSettingsChangesalt_Click(object sender, EventArgs e)
         {
-            //change salt
+            Console("interface show changesalt");
         }
         // console
         private void kryptonButtonConsoleSend_Click(object sender, EventArgs e)
@@ -576,6 +587,20 @@ namespace rpass
         {
             Console("open backupsfolder");
         }
+            // changesalt
+        private void kryptonButtonChangeSaltCancel_Click(object sender, EventArgs e)
+        {
+            Console("interface show defaultsettings");
+        }
+        private void kryptonButtonChangeSaltSave_Click(object sender, EventArgs e)
+        {
+            Console("changesalt");
+        }
+
+
+
+
+
 
         // INTERFACE
         public void InterfaceHide_All()
@@ -600,6 +625,7 @@ namespace rpass
             Console("interface hide auth");
             Console("interface hide changename");
             Console("interface hide defaultsettings");
+            Console("interface hide changesalt");
         }
 
         // CONSOLE
@@ -827,10 +853,17 @@ namespace rpass
                     kryptonComboBoxProfileColor.Location = new System.Drawing.Point(276, 204);
                     kryptonComboBoxProfileColor.Visible = true;
 
-                    kryptonButtonAccountChangeName.Location = new System.Drawing.Point(276, 329);
-                    kryptonButtonAccountChangeName.Visible = true;
-                    kryptonButtonAccountDel.Location = new System.Drawing.Point(276, 368);
-                    kryptonButtonAccountDel.Visible = true;
+                    if(currentUser.name == "root")
+                    {
+                        // Don't show
+                    }
+                    else
+                    {
+                        kryptonButtonAccountChangeName.Location = new System.Drawing.Point(276, 329);
+                        kryptonButtonAccountChangeName.Visible = true;
+                        kryptonButtonAccountDel.Location = new System.Drawing.Point(276, 368);
+                        kryptonButtonAccountDel.Visible = true;
+                    }
                     kryptonButtonRPassInfo.Location = new System.Drawing.Point(276, 441);
                     kryptonButtonRPassInfo.Visible = true;
                     break;
@@ -909,6 +942,8 @@ namespace rpass
                     kryptonButtonInfopassDelete.Visible = true;
                     kryptonButtonInfopassCopy.Location = new System.Drawing.Point(537, 56);
                     kryptonButtonInfopassCopy.Visible = true;
+                    kryptonButtonInfopassOpenLink.Location = new System.Drawing.Point(624, 56);
+                    kryptonButtonInfopassOpenLink.Visible = true;
                     break;
 
                 case "interface hide infopassword":
@@ -927,6 +962,7 @@ namespace rpass
                     kryptonButtonInfopassEdit.Visible = false;
                     kryptonButtonInfopassDelete.Visible = false;
                     kryptonButtonInfopassCopy.Visible = false;
+                    kryptonButtonInfopassOpenLink.Visible = false;
                     break;
 
                 case "interface show editpassword":
@@ -1035,36 +1071,36 @@ namespace rpass
 
                     kryptonLabelLoginError.Text = Rlang.error2[currentUser.language];
                     // show
-                    pictureBoxLoginIcon.Location = new System.Drawing.Point(384, 70);
+                    pictureBoxLoginIcon.Location = new System.Drawing.Point(384, 13);
                     pictureBoxLoginIcon.Visible = true;
 
-                    kryptonLabelBigTitleLogin.Location = new System.Drawing.Point(322, 160);
+                    kryptonLabelBigTitleLogin.Location = new System.Drawing.Point(322, 103);
                     kryptonLabelBigTitleLogin.Visible = true;
-                    kryptonLabelLoginName.Location = new System.Drawing.Point(322, 204);
+                    kryptonLabelLoginName.Location = new System.Drawing.Point(322, 147);
                     kryptonLabelLoginName.Visible = true;
-                    kryptonLabelLoginMasterpassword.Location = new System.Drawing.Point(322, 269);
+                    kryptonLabelLoginMasterpassword.Location = new System.Drawing.Point(322, 212);
                     kryptonLabelLoginMasterpassword.Visible = true;
-                    kryptonLabelLoginLang.Location = new System.Drawing.Point(322, 439);
+                    kryptonLabelLoginLang.Location = new System.Drawing.Point(322, 382);
                     kryptonLabelLoginLang.Visible = true;
 
-                    kryptonButtonLogin.Location = new System.Drawing.Point(322, 334);
+                    kryptonButtonLogin.Location = new System.Drawing.Point(322, 277);
                     kryptonButtonLogin.Visible = true;
-                    kryptonButtonRegister.Location = new System.Drawing.Point(322, 400);
+                    kryptonButtonRegister.Location = new System.Drawing.Point(322, 343);
                     kryptonButtonRegister.Visible = true;
-                    kryptonButtonLoginExit.Location = new System.Drawing.Point(457, 400);
+                    kryptonButtonLoginExit.Location = new System.Drawing.Point(457, 343);
                     kryptonButtonLoginExit.Visible = true;
-                    kryptonButtonLoginDefaultSettings.Location = new System.Drawing.Point(322, 502);
+                    kryptonButtonLoginDefaultSettings.Location = new System.Drawing.Point(322, 445);
                     kryptonButtonLoginDefaultSettings.Visible = true;
 
-                    kryptonTextBoxLoginName.Location = new System.Drawing.Point(322, 230);
+                    kryptonTextBoxLoginName.Location = new System.Drawing.Point(322, 173);
                     kryptonTextBoxLoginName.Visible = true;
-                    kryptonTextBoxLoginMasterpassword.Location = new System.Drawing.Point(322, 295);
+                    kryptonTextBoxLoginMasterpassword.Location = new System.Drawing.Point(322, 238);
                     kryptonTextBoxLoginMasterpassword.Text = "";
                     kryptonTextBoxLoginMasterpassword.Visible = true;
 
-                    kryptonComboBoxLoginLangSelector.Location = new System.Drawing.Point(322, 464);
+                    kryptonComboBoxLoginLangSelector.Location = new System.Drawing.Point(322, 407);
                     kryptonComboBoxLoginLangSelector.Visible = true;
-                    kryptonLabelLoginError.Location = new System.Drawing.Point(322, 375);
+                    kryptonLabelLoginError.Location = new System.Drawing.Point(322, 318);
                     kryptonLabelLoginError.Visible = false;
                     break;
 
@@ -1490,6 +1526,15 @@ namespace rpass
                     kryptonButtonInfopassCopy.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonInfopassCopy.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonInfopassCopy.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonInfopassOpenLink.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonInfopassOpenLink.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonInfopassOpenLink.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonInfopassOpenLink.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonInfopassOpenLink.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonInfopassOpenLink.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonInfopassOpenLink.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonInfopassOpenLink.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     // editpassword
                     kryptonButtonEditSave.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     kryptonButtonEditSave.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
@@ -1848,6 +1893,26 @@ namespace rpass
                     kryptonButtonConsoleSend.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonConsoleSend.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
                     kryptonButtonConsoleSend.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    // changesalt
+                    kryptonLabelBigTitleChangeSalt.StateCommon.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+
+                    kryptonButtonChangeSaltSave.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangeSaltSave.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangeSaltSave.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangeSaltSave.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangeSaltSave.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangeSaltSave.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangeSaltSave.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangeSaltSave.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+
+                    kryptonButtonChangeSaltCancel.StateCommon.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangeSaltCancel.StateCommon.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangeSaltCancel.StateCommon.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangeSaltCancel.StatePressed.Border.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangeSaltCancel.StatePressed.Border.Color2 = Color.FromArgb(userColor2, userColor2, userColor2);
+                    kryptonButtonChangeSaltCancel.StatePressed.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangeSaltCancel.StateTracking.Content.ShortText.Color1 = Color.FromArgb(userColor1, userColor1, userColor1);
+                    kryptonButtonChangeSaltCancel.StateTracking.Back.Color1 = Color.FromArgb(userColor2, userColor2, userColor2);
                     break;
 
                 case "error login credentials":
@@ -1895,6 +1960,7 @@ namespace rpass
                     // hide all interfaces
                     Console("interface disable dashbutton");
                     Console("interface disable passwordlist");
+                    Console("error register reset");
 
                     InterfaceHide_All();
                     // language
@@ -2907,6 +2973,173 @@ namespace rpass
                     }
                     catch
                     { }
+                    break;
+
+                case "interface show changesalt":
+                    // hide all interfaces
+                    Console("interface disable dashbutton");
+                    Console("interface disable passwordlist");
+                    Console("error register reset");
+
+                    InterfaceHide_All();
+                    // language
+                    kryptonLabelBigTitleChangeSalt.Text = Rlang.title15changedefsalt[currentUser.language];
+
+                    kryptonButtonChangeSaltSave.Text = Rlang.button1save[currentUser.language];
+                    kryptonButtonChangeSaltCancel.Text = Rlang.button2cancel[currentUser.language];
+
+                    kryptonLabelRegisterSalt.Text = Rlang.minititle22newsecretcode[currentUser.language];
+                    kryptonLabelRegisterReq.Text = Rlang.minititle23req2[currentUser.language];
+                    // show
+                    kryptonLabelBigTitleChangeSalt.Location = new System.Drawing.Point(276, 12);
+                    kryptonLabelBigTitleChangeSalt.Visible = true;
+
+                    kryptonButtonChangeSaltSave.Location = new System.Drawing.Point(276, 56);
+                    kryptonButtonChangeSaltSave.Visible = true;
+                    kryptonButtonChangeSaltCancel.Location = new System.Drawing.Point(363, 56);
+                    kryptonButtonChangeSaltCancel.Visible = true;
+
+                    kryptonLabelRegisterSalt.Location = new System.Drawing.Point(276, 113);
+                    kryptonLabelRegisterSalt.Visible = true;
+                    kryptonLabelRegisterReq.Location = new System.Drawing.Point(276, 207);
+                    kryptonLabelRegisterReq.Visible = true;
+
+                    kryptonTextBoxRegisterSalt1.Location = new System.Drawing.Point(276, 139);
+                    kryptonTextBoxRegisterSalt1.Text = "";
+                    kryptonTextBoxRegisterSalt1.Visible = true;
+                    kryptonTextBoxRegisterSalt2.Location = new System.Drawing.Point(304, 139);
+                    kryptonTextBoxRegisterSalt2.Text = "";
+                    kryptonTextBoxRegisterSalt2.Visible = true;
+                    kryptonTextBoxRegisterSalt3.Location = new System.Drawing.Point(332, 139);
+                    kryptonTextBoxRegisterSalt3.Text = "";
+                    kryptonTextBoxRegisterSalt3.Visible = true;
+                    kryptonTextBoxRegisterSalt4.Location = new System.Drawing.Point(360, 139);
+                    kryptonTextBoxRegisterSalt4.Text = "";
+                    kryptonTextBoxRegisterSalt4.Visible = true;
+                    kryptonTextBoxRegisterSalt5.Location = new System.Drawing.Point(388, 139);
+                    kryptonTextBoxRegisterSalt5.Text = "";
+                    kryptonTextBoxRegisterSalt5.Visible = true;
+                    kryptonTextBoxRegisterSalt6.Location = new System.Drawing.Point(416, 139);
+                    kryptonTextBoxRegisterSalt6.Text = "";
+                    kryptonTextBoxRegisterSalt6.Visible = true;
+                    kryptonTextBoxRegisterSalt7.Location = new System.Drawing.Point(444, 139);
+                    kryptonTextBoxRegisterSalt7.Text = "";
+                    kryptonTextBoxRegisterSalt7.Visible = true;
+                    kryptonTextBoxRegisterSalt8.Location = new System.Drawing.Point(472, 139);
+                    kryptonTextBoxRegisterSalt8.Text = "";
+                    kryptonTextBoxRegisterSalt8.Visible = true;
+                    break;
+
+                case "interface hide changesalt":
+                    kryptonLabelBigTitleChangeSalt.Visible = false;
+
+                    kryptonButtonChangeSaltSave.Visible = false;
+                    kryptonButtonChangeSaltCancel.Visible = false;
+
+                    kryptonLabelRegisterSalt.Visible = false;
+                    kryptonLabelRegisterReq.Visible = false;
+
+                    kryptonTextBoxRegisterSalt1.Visible = false;
+                    kryptonTextBoxRegisterSalt2.Visible = false;
+                    kryptonTextBoxRegisterSalt3.Visible = false;
+                    kryptonTextBoxRegisterSalt4.Visible = false;
+                    kryptonTextBoxRegisterSalt5.Visible = false;
+                    kryptonTextBoxRegisterSalt6.Visible = false;
+                    kryptonTextBoxRegisterSalt7.Visible = false;
+                    kryptonTextBoxRegisterSalt8.Visible = false;
+                    break;
+
+                case "changesalt":
+                    // Reset error
+                    Console("error register reset");
+                    // Checking if there's empty forms
+                    if (kryptonTextBoxRegisterSalt1.Text == "" ||
+                        kryptonTextBoxRegisterSalt2.Text == "" ||
+                        kryptonTextBoxRegisterSalt3.Text == "" ||
+                        kryptonTextBoxRegisterSalt4.Text == "" ||
+                        kryptonTextBoxRegisterSalt5.Text == "" ||
+                        kryptonTextBoxRegisterSalt6.Text == "" ||
+                        kryptonTextBoxRegisterSalt7.Text == "" ||
+                        kryptonTextBoxRegisterSalt8.Text == "")
+                    {
+                        // Empty forms, return error
+                        Console("error register reqforms");
+                    }
+                    else
+                    {
+                        // There's not empty forms
+                        // Checking if salt is in valid form
+
+                        // Create a list for an easier comparison
+                        List<string> registerCompareSalts = new List<string>();
+                        registerCompareSalts.Clear();
+                        registerCompareSalts.Add(kryptonTextBoxRegisterSalt1.Text);
+                        registerCompareSalts.Add(kryptonTextBoxRegisterSalt2.Text);
+                        registerCompareSalts.Add(kryptonTextBoxRegisterSalt3.Text);
+                        registerCompareSalts.Add(kryptonTextBoxRegisterSalt4.Text);
+                        registerCompareSalts.Add(kryptonTextBoxRegisterSalt5.Text);
+                        registerCompareSalts.Add(kryptonTextBoxRegisterSalt6.Text);
+                        registerCompareSalts.Add(kryptonTextBoxRegisterSalt7.Text);
+                        registerCompareSalts.Add(kryptonTextBoxRegisterSalt8.Text);
+
+                        // Compare the list
+                        bool registerIsSaltValid = true;
+                        for (int index = 0; index <= 7; index++)
+                        {
+                            if (!(registerCompareSalts[index] == "0" ||
+                            registerCompareSalts[index] == "1" ||
+                            registerCompareSalts[index] == "2" ||
+                            registerCompareSalts[index] == "3" ||
+                            registerCompareSalts[index] == "4" ||
+                            registerCompareSalts[index] == "5" ||
+                            registerCompareSalts[index] == "6" ||
+                            registerCompareSalts[index] == "7" ||
+                            registerCompareSalts[index] == "8" ||
+                            registerCompareSalts[index] == "9"))
+                            {
+                                // Form invalid, returning error
+                                registerIsSaltValid = false;
+                            }
+                        }
+                        registerCompareSalts.Clear();
+
+                        // Continue
+                        if (registerIsSaltValid)
+                        {
+                            // Save new default salt
+
+                            // Prepare it for saving
+                            int crDefaultSalt = 0;
+                            crDefaultSalt = crDefaultSalt + Convert.ToInt32(kryptonTextBoxRegisterSalt1.Text); // index 0
+                            crDefaultSalt = crDefaultSalt + (Convert.ToInt32(kryptonTextBoxRegisterSalt2.Text) * 10); // index 1
+                            crDefaultSalt = crDefaultSalt + (Convert.ToInt32(kryptonTextBoxRegisterSalt3.Text) * 100); // index 2
+                            crDefaultSalt = crDefaultSalt + (Convert.ToInt32(kryptonTextBoxRegisterSalt4.Text) * 1000); // index 3
+                            crDefaultSalt = crDefaultSalt + (Convert.ToInt32(kryptonTextBoxRegisterSalt5.Text) * 10000); // index 4
+                            crDefaultSalt = crDefaultSalt + (Convert.ToInt32(kryptonTextBoxRegisterSalt6.Text) * 100000); // index 5
+                            crDefaultSalt = crDefaultSalt + (Convert.ToInt32(kryptonTextBoxRegisterSalt7.Text) * 1000000); // index 6
+                            crDefaultSalt = crDefaultSalt + (Convert.ToInt32(kryptonTextBoxRegisterSalt8.Text) * 10000000); // index 7
+                            // Save it
+                            defaultUser.salt = crDefaultSalt.ToString();
+                            crDefaultSalt = 0;
+                            Console("save settings");
+                            // Continue
+                            Console("notification saltchanged");
+                        }
+                        else
+                        {
+                            // Form invalid, returning error
+                            Console("error register reqforms");
+                        }
+                    }
+                    break;
+
+                case "notification saltchanged":
+                    // Set notification
+                    currentNotificationTitle = Rlang.minititle48notifsaltchanged[currentUser.language];
+                    currentNotificationContents = Rlang.minititle47notifsaltchanged[currentUser.language];
+                    currentNotificationCommand = "interface show defaultsettings";
+                    // Show it
+                    Console("interface show notification");
                     break;
             }
         }

@@ -288,6 +288,7 @@
     <None Include="GRAPHICS\loginicon.png" />
     <None Include="GRAPHICS\saveicon.png" />
     <None Include="GRAPHICS\atticon.png" />
+    <None Include="GRAPHICS\salticon.png" />
     <Content Include="rpassicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -160,14 +160,6 @@ namespace rpass
             this.kryptonButtonChangenameCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButtonChangenameSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonLabelChangenameReq = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.pictureBoxSave = new System.Windows.Forms.PictureBox();
-            this.pictureBoxLoginIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUseryellow = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUserred = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUsergreen = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUserblue = new System.Windows.Forms.PictureBox();
-            this.pictureBoxUsergray = new System.Windows.Forms.PictureBox();
-            this.pictureBoxRPassIcon = new System.Windows.Forms.PictureBox();
             this.kryptonLabelBigTitleDefaultsettings = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonComboBoxDefaultSettingsIfDarkTheme = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButtonDefaultSettingsChangesalt = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -184,10 +176,23 @@ namespace rpass
             this.kryptonButtonDefaultSettingsOpensaves = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButtonDefaultSettingsOpenbackups = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButtonDefaultSettingsReset = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.pictureBoxSave = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLoginIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUseryellow = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUserred = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUsergreen = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUserblue = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUsergray = new System.Windows.Forms.PictureBox();
+            this.pictureBoxRPassIcon = new System.Windows.Forms.PictureBox();
+            this.kryptonLabelBigTitleChangeSalt = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonButtonChangeSaltSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButtonChangeSaltCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButtonInfopassOpenLink = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLangSelector)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxIfDarkTheme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxProfileColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLoginLangSelector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDefaultSettingsIfDarkTheme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoginIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUseryellow)).BeginInit();
@@ -196,7 +201,6 @@ namespace rpass
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserblue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsergray)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRPassIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDefaultSettingsIfDarkTheme)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonListBox1
@@ -267,7 +271,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitlePass
             // 
-            this.kryptonLabelBigTitlePass.Location = new System.Drawing.Point(521, 523);
+            this.kryptonLabelBigTitlePass.Location = new System.Drawing.Point(498, 509);
             this.kryptonLabelBigTitlePass.Name = "kryptonLabelBigTitlePass";
             this.kryptonLabelBigTitlePass.Size = new System.Drawing.Size(301, 38);
             this.kryptonLabelBigTitlePass.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -550,7 +554,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleDashboard
             // 
-            this.kryptonLabelBigTitleDashboard.Location = new System.Drawing.Point(669, 523);
+            this.kryptonLabelBigTitleDashboard.Location = new System.Drawing.Point(588, 509);
             this.kryptonLabelBigTitleDashboard.Name = "kryptonLabelBigTitleDashboard";
             this.kryptonLabelBigTitleDashboard.Size = new System.Drawing.Size(149, 38);
             this.kryptonLabelBigTitleDashboard.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -1013,7 +1017,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleInfoshow
             // 
-            this.kryptonLabelBigTitleInfoshow.Location = new System.Drawing.Point(544, 523);
+            this.kryptonLabelBigTitleInfoshow.Location = new System.Drawing.Point(483, 509);
             this.kryptonLabelBigTitleInfoshow.Name = "kryptonLabelBigTitleInfoshow";
             this.kryptonLabelBigTitleInfoshow.Size = new System.Drawing.Size(234, 38);
             this.kryptonLabelBigTitleInfoshow.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -1356,7 +1360,7 @@ namespace rpass
             // 
             // kryptonButtonInfopassCopy
             // 
-            this.kryptonButtonInfopassCopy.Location = new System.Drawing.Point(700, 194);
+            this.kryptonButtonInfopassCopy.Location = new System.Drawing.Point(537, 56);
             this.kryptonButtonInfopassCopy.Name = "kryptonButtonInfopassCopy";
             this.kryptonButtonInfopassCopy.Size = new System.Drawing.Size(81, 33);
             this.kryptonButtonInfopassCopy.StateCommon.Back.Color1 = System.Drawing.Color.Green;
@@ -1492,7 +1496,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleSett
             // 
-            this.kryptonLabelBigTitleSett.Location = new System.Drawing.Point(611, 523);
+            this.kryptonLabelBigTitleSett.Location = new System.Drawing.Point(581, 509);
             this.kryptonLabelBigTitleSett.Name = "kryptonLabelBigTitleSett";
             this.kryptonLabelBigTitleSett.Size = new System.Drawing.Size(114, 38);
             this.kryptonLabelBigTitleSett.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -2181,7 +2185,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleLogin
             // 
-            this.kryptonLabelBigTitleLogin.Location = new System.Drawing.Point(655, 523);
+            this.kryptonLabelBigTitleLogin.Location = new System.Drawing.Point(596, 509);
             this.kryptonLabelBigTitleLogin.Name = "kryptonLabelBigTitleLogin";
             this.kryptonLabelBigTitleLogin.Size = new System.Drawing.Size(82, 38);
             this.kryptonLabelBigTitleLogin.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -2209,7 +2213,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleEula
             // 
-            this.kryptonLabelBigTitleEula.Location = new System.Drawing.Point(620, 523);
+            this.kryptonLabelBigTitleEula.Location = new System.Drawing.Point(581, 509);
             this.kryptonLabelBigTitleEula.Name = "kryptonLabelBigTitleEula";
             this.kryptonLabelBigTitleEula.Size = new System.Drawing.Size(145, 38);
             this.kryptonLabelBigTitleEula.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -2519,7 +2523,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleRegister
             // 
-            this.kryptonLabelBigTitleRegister.Location = new System.Drawing.Point(609, 523);
+            this.kryptonLabelBigTitleRegister.Location = new System.Drawing.Point(571, 509);
             this.kryptonLabelBigTitleRegister.Name = "kryptonLabelBigTitleRegister";
             this.kryptonLabelBigTitleRegister.Size = new System.Drawing.Size(116, 38);
             this.kryptonLabelBigTitleRegister.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -2533,7 +2537,7 @@ namespace rpass
             // 
             // kryptonLabelRegisterSalt
             // 
-            this.kryptonLabelRegisterSalt.Location = new System.Drawing.Point(595, 497);
+            this.kryptonLabelRegisterSalt.Location = new System.Drawing.Point(534, 509);
             this.kryptonLabelRegisterSalt.Name = "kryptonLabelRegisterSalt";
             this.kryptonLabelRegisterSalt.Size = new System.Drawing.Size(170, 20);
             this.kryptonLabelRegisterSalt.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -2547,7 +2551,7 @@ namespace rpass
             // 
             // kryptonTextBoxRegisterSalt1
             // 
-            this.kryptonTextBoxRegisterSalt1.Location = new System.Drawing.Point(850, 453);
+            this.kryptonTextBoxRegisterSalt1.Location = new System.Drawing.Point(833, 453);
             this.kryptonTextBoxRegisterSalt1.MaxLength = 1;
             this.kryptonTextBoxRegisterSalt1.Name = "kryptonTextBoxRegisterSalt1";
             this.kryptonTextBoxRegisterSalt1.Size = new System.Drawing.Size(22, 33);
@@ -2560,7 +2564,7 @@ namespace rpass
             // 
             // kryptonTextBoxRegisterSalt2
             // 
-            this.kryptonTextBoxRegisterSalt2.Location = new System.Drawing.Point(850, 453);
+            this.kryptonTextBoxRegisterSalt2.Location = new System.Drawing.Point(861, 453);
             this.kryptonTextBoxRegisterSalt2.MaxLength = 1;
             this.kryptonTextBoxRegisterSalt2.Name = "kryptonTextBoxRegisterSalt2";
             this.kryptonTextBoxRegisterSalt2.Size = new System.Drawing.Size(22, 33);
@@ -2573,7 +2577,7 @@ namespace rpass
             // 
             // kryptonTextBoxRegisterSalt3
             // 
-            this.kryptonTextBoxRegisterSalt3.Location = new System.Drawing.Point(850, 453);
+            this.kryptonTextBoxRegisterSalt3.Location = new System.Drawing.Point(889, 453);
             this.kryptonTextBoxRegisterSalt3.MaxLength = 1;
             this.kryptonTextBoxRegisterSalt3.Name = "kryptonTextBoxRegisterSalt3";
             this.kryptonTextBoxRegisterSalt3.Size = new System.Drawing.Size(22, 33);
@@ -2586,7 +2590,7 @@ namespace rpass
             // 
             // kryptonTextBoxRegisterSalt4
             // 
-            this.kryptonTextBoxRegisterSalt4.Location = new System.Drawing.Point(850, 453);
+            this.kryptonTextBoxRegisterSalt4.Location = new System.Drawing.Point(917, 453);
             this.kryptonTextBoxRegisterSalt4.MaxLength = 1;
             this.kryptonTextBoxRegisterSalt4.Name = "kryptonTextBoxRegisterSalt4";
             this.kryptonTextBoxRegisterSalt4.Size = new System.Drawing.Size(22, 33);
@@ -2599,7 +2603,7 @@ namespace rpass
             // 
             // kryptonTextBoxRegisterSalt8
             // 
-            this.kryptonTextBoxRegisterSalt8.Location = new System.Drawing.Point(850, 453);
+            this.kryptonTextBoxRegisterSalt8.Location = new System.Drawing.Point(1029, 453);
             this.kryptonTextBoxRegisterSalt8.MaxLength = 1;
             this.kryptonTextBoxRegisterSalt8.Name = "kryptonTextBoxRegisterSalt8";
             this.kryptonTextBoxRegisterSalt8.Size = new System.Drawing.Size(22, 33);
@@ -2612,7 +2616,7 @@ namespace rpass
             // 
             // kryptonTextBoxRegisterSalt7
             // 
-            this.kryptonTextBoxRegisterSalt7.Location = new System.Drawing.Point(850, 453);
+            this.kryptonTextBoxRegisterSalt7.Location = new System.Drawing.Point(1001, 453);
             this.kryptonTextBoxRegisterSalt7.MaxLength = 1;
             this.kryptonTextBoxRegisterSalt7.Name = "kryptonTextBoxRegisterSalt7";
             this.kryptonTextBoxRegisterSalt7.Size = new System.Drawing.Size(22, 33);
@@ -2625,7 +2629,7 @@ namespace rpass
             // 
             // kryptonTextBoxRegisterSalt6
             // 
-            this.kryptonTextBoxRegisterSalt6.Location = new System.Drawing.Point(850, 453);
+            this.kryptonTextBoxRegisterSalt6.Location = new System.Drawing.Point(973, 453);
             this.kryptonTextBoxRegisterSalt6.MaxLength = 1;
             this.kryptonTextBoxRegisterSalt6.Name = "kryptonTextBoxRegisterSalt6";
             this.kryptonTextBoxRegisterSalt6.Size = new System.Drawing.Size(22, 33);
@@ -2638,7 +2642,7 @@ namespace rpass
             // 
             // kryptonTextBoxRegisterSalt5
             // 
-            this.kryptonTextBoxRegisterSalt5.Location = new System.Drawing.Point(850, 453);
+            this.kryptonTextBoxRegisterSalt5.Location = new System.Drawing.Point(945, 453);
             this.kryptonTextBoxRegisterSalt5.MaxLength = 1;
             this.kryptonTextBoxRegisterSalt5.Name = "kryptonTextBoxRegisterSalt5";
             this.kryptonTextBoxRegisterSalt5.Size = new System.Drawing.Size(22, 33);
@@ -2787,7 +2791,7 @@ namespace rpass
             // 
             // kryptonLabelRegisterReq
             // 
-            this.kryptonLabelRegisterReq.Location = new System.Drawing.Point(611, 497);
+            this.kryptonLabelRegisterReq.Location = new System.Drawing.Point(549, 497);
             this.kryptonLabelRegisterReq.Name = "kryptonLabelRegisterReq";
             this.kryptonLabelRegisterReq.Size = new System.Drawing.Size(153, 20);
             this.kryptonLabelRegisterReq.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -2801,7 +2805,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleAbout
             // 
-            this.kryptonLabelBigTitleAbout.Location = new System.Drawing.Point(601, 523);
+            this.kryptonLabelBigTitleAbout.Location = new System.Drawing.Point(571, 509);
             this.kryptonLabelBigTitleAbout.Name = "kryptonLabelBigTitleAbout";
             this.kryptonLabelBigTitleAbout.Size = new System.Drawing.Size(167, 38);
             this.kryptonLabelBigTitleAbout.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -2829,7 +2833,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleNotification
             // 
-            this.kryptonLabelBigTitleNotification.Location = new System.Drawing.Point(562, 523);
+            this.kryptonLabelBigTitleNotification.Location = new System.Drawing.Point(541, 509);
             this.kryptonLabelBigTitleNotification.Name = "kryptonLabelBigTitleNotification";
             this.kryptonLabelBigTitleNotification.Size = new System.Drawing.Size(163, 38);
             this.kryptonLabelBigTitleNotification.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -2925,7 +2929,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleGenerate
             // 
-            this.kryptonLabelBigTitleGenerate.Location = new System.Drawing.Point(533, 523);
+            this.kryptonLabelBigTitleGenerate.Location = new System.Drawing.Point(506, 509);
             this.kryptonLabelBigTitleGenerate.Name = "kryptonLabelBigTitleGenerate";
             this.kryptonLabelBigTitleGenerate.Size = new System.Drawing.Size(276, 38);
             this.kryptonLabelBigTitleGenerate.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -3101,7 +3105,7 @@ namespace rpass
             // 
             // kryptonLabelGenerateSett
             // 
-            this.kryptonLabelGenerateSett.Location = new System.Drawing.Point(620, 488);
+            this.kryptonLabelGenerateSett.Location = new System.Drawing.Point(581, 509);
             this.kryptonLabelGenerateSett.Name = "kryptonLabelGenerateSett";
             this.kryptonLabelGenerateSett.Size = new System.Drawing.Size(84, 28);
             this.kryptonLabelGenerateSett.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -3115,7 +3119,7 @@ namespace rpass
             // 
             // kryptonLabelGenerateSize
             // 
-            this.kryptonLabelGenerateSize.Location = new System.Drawing.Point(655, 497);
+            this.kryptonLabelGenerateSize.Location = new System.Drawing.Point(599, 517);
             this.kryptonLabelGenerateSize.Name = "kryptonLabelGenerateSize";
             this.kryptonLabelGenerateSize.Size = new System.Drawing.Size(38, 20);
             this.kryptonLabelGenerateSize.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -3321,7 +3325,7 @@ namespace rpass
             // 
             // kryptonLabelBigTitleChangename
             // 
-            this.kryptonLabelBigTitleChangename.Location = new System.Drawing.Point(533, 523);
+            this.kryptonLabelBigTitleChangename.Location = new System.Drawing.Point(504, 499);
             this.kryptonLabelBigTitleChangename.Name = "kryptonLabelBigTitleChangename";
             this.kryptonLabelBigTitleChangename.Size = new System.Drawing.Size(246, 38);
             this.kryptonLabelBigTitleChangename.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -3347,7 +3351,7 @@ namespace rpass
             // 
             // kryptonLabelChangenameEnter
             // 
-            this.kryptonLabelChangenameEnter.Location = new System.Drawing.Point(639, 492);
+            this.kryptonLabelChangenameEnter.Location = new System.Drawing.Point(588, 517);
             this.kryptonLabelChangenameEnter.Name = "kryptonLabelChangenameEnter";
             this.kryptonLabelChangenameEnter.Size = new System.Drawing.Size(125, 20);
             this.kryptonLabelChangenameEnter.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -3361,7 +3365,7 @@ namespace rpass
             // 
             // kryptonButtonChangenameCancel
             // 
-            this.kryptonButtonChangenameCancel.Location = new System.Drawing.Point(702, 194);
+            this.kryptonButtonChangenameCancel.Location = new System.Drawing.Point(698, 194);
             this.kryptonButtonChangenameCancel.Name = "kryptonButtonChangenameCancel";
             this.kryptonButtonChangenameCancel.Size = new System.Drawing.Size(81, 33);
             this.kryptonButtonChangenameCancel.StateCommon.Back.Color1 = System.Drawing.Color.Red;
@@ -3497,7 +3501,7 @@ namespace rpass
             // 
             // kryptonLabelChangenameReq
             // 
-            this.kryptonLabelChangenameReq.Location = new System.Drawing.Point(633, 492);
+            this.kryptonLabelChangenameReq.Location = new System.Drawing.Point(560, 509);
             this.kryptonLabelChangenameReq.Name = "kryptonLabelChangenameReq";
             this.kryptonLabelChangenameReq.Size = new System.Drawing.Size(144, 20);
             this.kryptonLabelChangenameReq.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
@@ -3508,6 +3512,738 @@ namespace rpass
             this.kryptonLabelChangenameReq.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
             this.kryptonLabelChangenameReq.TabIndex = 134;
             this.kryptonLabelChangenameReq.Values.Text = "*Name can\'t be blank";
+            // 
+            // kryptonLabelBigTitleDefaultsettings
+            // 
+            this.kryptonLabelBigTitleDefaultsettings.Location = new System.Drawing.Point(533, 523);
+            this.kryptonLabelBigTitleDefaultsettings.Name = "kryptonLabelBigTitleDefaultsettings";
+            this.kryptonLabelBigTitleDefaultsettings.Size = new System.Drawing.Size(27, 38);
+            this.kryptonLabelBigTitleDefaultsettings.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelBigTitleDefaultsettings.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelBigTitleDefaultsettings.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelBigTitleDefaultsettings.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelBigTitleDefaultsettings.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelBigTitleDefaultsettings.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelBigTitleDefaultsettings.TabIndex = 137;
+            this.kryptonLabelBigTitleDefaultsettings.Values.Text = "s";
+            // 
+            // kryptonComboBoxDefaultSettingsIfDarkTheme
+            // 
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.DropDownWidth = 173;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Items.AddRange(new object[] {
+            "Dark - Întunecat",
+            "Light - Luminat"});
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Location = new System.Drawing.Point(667, 254);
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Name = "kryptonComboBoxDefaultSettingsIfDarkTheme";
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Size = new System.Drawing.Size(169, 29);
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Sorted = true;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Black;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.ColorAngle = 30F;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Rounding = 12;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Width = 1;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Ubuntu", 10F);
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.DropBack.Color1 = System.Drawing.Color.Black;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.DropBack.Color2 = System.Drawing.Color.Black;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Back.Color1 = System.Drawing.Color.Black;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Back.Color2 = System.Drawing.Color.Black;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Ubuntu", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.TabIndex = 138;
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Text = "Light - Luminat";
+            this.kryptonComboBoxDefaultSettingsIfDarkTheme.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxDefaultSettingsIfDarkTheme_SelectedIndexChanged);
+            // 
+            // kryptonButtonDefaultSettingsChangesalt
+            // 
+            this.kryptonButtonDefaultSettingsChangesalt.Location = new System.Drawing.Point(638, 194);
+            this.kryptonButtonDefaultSettingsChangesalt.Name = "kryptonButtonDefaultSettingsChangesalt";
+            this.kryptonButtonDefaultSettingsChangesalt.Size = new System.Drawing.Size(190, 33);
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Back.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Width = 1;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsChangesalt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsChangesalt.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsChangesalt.StateDisabled.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsChangesalt.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsChangesalt.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsChangesalt.StateNormal.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Back.Color1 = System.Drawing.Color.Magenta;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Back.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.Color1 = System.Drawing.Color.Purple;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsChangesalt.TabIndex = 139;
+            this.kryptonButtonDefaultSettingsChangesalt.Values.Text = "Change default salt";
+            this.kryptonButtonDefaultSettingsChangesalt.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsChangesalt_Click);
+            // 
+            // kryptonLabelDefaultSettingsLang
+            // 
+            this.kryptonLabelDefaultSettingsLang.Location = new System.Drawing.Point(483, 517);
+            this.kryptonLabelDefaultSettingsLang.Name = "kryptonLabelDefaultSettingsLang";
+            this.kryptonLabelDefaultSettingsLang.Size = new System.Drawing.Size(264, 20);
+            this.kryptonLabelDefaultSettingsLang.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsLang.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsLang.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelDefaultSettingsLang.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsLang.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsLang.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelDefaultSettingsLang.TabIndex = 141;
+            this.kryptonLabelDefaultSettingsLang.Values.Text = "Default language: (when you open RPass)";
+            // 
+            // kryptonLabelDefaultSettingsTheme
+            // 
+            this.kryptonLabelDefaultSettingsTheme.Location = new System.Drawing.Point(518, 509);
+            this.kryptonLabelDefaultSettingsTheme.Name = "kryptonLabelDefaultSettingsTheme";
+            this.kryptonLabelDefaultSettingsTheme.Size = new System.Drawing.Size(248, 20);
+            this.kryptonLabelDefaultSettingsTheme.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsTheme.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsTheme.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelDefaultSettingsTheme.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsTheme.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsTheme.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelDefaultSettingsTheme.TabIndex = 142;
+            this.kryptonLabelDefaultSettingsTheme.Values.Text = "Default theme: (when you open RPass)";
+            // 
+            // kryptonLabelDefaultSettingsOther
+            // 
+            this.kryptonLabelDefaultSettingsOther.Location = new System.Drawing.Point(573, 509);
+            this.kryptonLabelDefaultSettingsOther.Name = "kryptonLabelDefaultSettingsOther";
+            this.kryptonLabelDefaultSettingsOther.Size = new System.Drawing.Size(140, 28);
+            this.kryptonLabelDefaultSettingsOther.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsOther.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsOther.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelDefaultSettingsOther.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsOther.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsOther.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 13F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelDefaultSettingsOther.TabIndex = 143;
+            this.kryptonLabelDefaultSettingsOther.Values.Text = "Other settings";
+            // 
+            // kryptonLabelDefaultSettingsWarn
+            // 
+            this.kryptonLabelDefaultSettingsWarn.Location = new System.Drawing.Point(443, 509);
+            this.kryptonLabelDefaultSettingsWarn.Name = "kryptonLabelDefaultSettingsWarn";
+            this.kryptonLabelDefaultSettingsWarn.Size = new System.Drawing.Size(363, 20);
+            this.kryptonLabelDefaultSettingsWarn.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsWarn.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelDefaultSettingsWarn.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelDefaultSettingsWarn.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
+            this.kryptonLabelDefaultSettingsWarn.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
+            this.kryptonLabelDefaultSettingsWarn.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelDefaultSettingsWarn.TabIndex = 144;
+            this.kryptonLabelDefaultSettingsWarn.Values.Text = "!! DON\'T USE UNLESS YOU KNOW WHAT ARE YOU DOING !!";
+            // 
+            // kryptonButtonConsoleToggle
+            // 
+            this.kryptonButtonConsoleToggle.Location = new System.Drawing.Point(655, 194);
+            this.kryptonButtonConsoleToggle.Name = "kryptonButtonConsoleToggle";
+            this.kryptonButtonConsoleToggle.Size = new System.Drawing.Size(190, 33);
+            this.kryptonButtonConsoleToggle.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
+            this.kryptonButtonConsoleToggle.StateCommon.Back.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonConsoleToggle.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonConsoleToggle.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonConsoleToggle.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonConsoleToggle.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonConsoleToggle.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleToggle.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonConsoleToggle.StateCommon.Border.Width = 1;
+            this.kryptonButtonConsoleToggle.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonConsoleToggle.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleToggle.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleToggle.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonConsoleToggle.StateDisabled.Border.Width = 2;
+            this.kryptonButtonConsoleToggle.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleToggle.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonConsoleToggle.StateNormal.Border.Width = 2;
+            this.kryptonButtonConsoleToggle.StatePressed.Back.Color1 = System.Drawing.Color.Magenta;
+            this.kryptonButtonConsoleToggle.StatePressed.Back.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonConsoleToggle.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonConsoleToggle.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonConsoleToggle.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonConsoleToggle.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleToggle.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonConsoleToggle.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleToggle.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleToggle.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonConsoleToggle.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonConsoleToggle.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonConsoleToggle.StateTracking.Border.Color1 = System.Drawing.Color.Purple;
+            this.kryptonButtonConsoleToggle.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonConsoleToggle.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonConsoleToggle.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleToggle.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonConsoleToggle.StateTracking.Border.Width = 2;
+            this.kryptonButtonConsoleToggle.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonConsoleToggle.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleToggle.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleToggle.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonConsoleToggle.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleToggle.TabIndex = 145;
+            this.kryptonButtonConsoleToggle.Values.Text = "TOGGLE CONSOLE";
+            this.kryptonButtonConsoleToggle.Click += new System.EventHandler(this.kryptonButtonConsoleToggle_Click);
+            // 
+            // kryptonButtonDefaultSettingsResetsalt
+            // 
+            this.kryptonButtonDefaultSettingsResetsalt.Location = new System.Drawing.Point(667, 194);
+            this.kryptonButtonDefaultSettingsResetsalt.Name = "kryptonButtonDefaultSettingsResetsalt";
+            this.kryptonButtonDefaultSettingsResetsalt.Size = new System.Drawing.Size(190, 33);
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Back.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Width = 1;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsResetsalt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsResetsalt.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsResetsalt.StateDisabled.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsResetsalt.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsResetsalt.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsResetsalt.StateNormal.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Back.Color1 = System.Drawing.Color.Magenta;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Back.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.Color1 = System.Drawing.Color.Purple;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsResetsalt.TabIndex = 146;
+            this.kryptonButtonDefaultSettingsResetsalt.Values.Text = "Reset to default salt";
+            this.kryptonButtonDefaultSettingsResetsalt.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsResetsalt_Click);
+            // 
+            // kryptonButtonDefaultSettingsBack
+            // 
+            this.kryptonButtonDefaultSettingsBack.Location = new System.Drawing.Point(611, 194);
+            this.kryptonButtonDefaultSettingsBack.Name = "kryptonButtonDefaultSettingsBack";
+            this.kryptonButtonDefaultSettingsBack.Size = new System.Drawing.Size(270, 33);
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Back.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Back.Color2 = System.Drawing.Color.DarkTurquoise;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.Width = 1;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsBack.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsBack.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsBack.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsBack.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsBack.StateNormal.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Back.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Back.Color2 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.Color2 = System.Drawing.Color.DarkTurquoise;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsBack.TabIndex = 147;
+            this.kryptonButtonDefaultSettingsBack.Values.Text = "← Login";
+            this.kryptonButtonDefaultSettingsBack.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsBack_Click);
+            // 
+            // kryptonButtonLoginDefaultSettings
+            // 
+            this.kryptonButtonLoginDefaultSettings.Location = new System.Drawing.Point(641, 194);
+            this.kryptonButtonLoginDefaultSettings.Name = "kryptonButtonLoginDefaultSettings";
+            this.kryptonButtonLoginDefaultSettings.Size = new System.Drawing.Size(216, 33);
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Back.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Back.Color2 = System.Drawing.Color.DarkTurquoise;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.Width = 1;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonLoginDefaultSettings.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonLoginDefaultSettings.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonLoginDefaultSettings.StateDisabled.Border.Width = 2;
+            this.kryptonButtonLoginDefaultSettings.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonLoginDefaultSettings.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonLoginDefaultSettings.StateNormal.Border.Width = 2;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Back.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Back.Color2 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.Color2 = System.Drawing.Color.DarkTurquoise;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.Width = 2;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonLoginDefaultSettings.TabIndex = 148;
+            this.kryptonButtonLoginDefaultSettings.Values.Text = "Default settings";
+            this.kryptonButtonLoginDefaultSettings.Click += new System.EventHandler(this.kryptonButtonLoginDefaultSettings_Click);
+            // 
+            // kryptonTextBoxConsoleCommand
+            // 
+            this.kryptonTextBoxConsoleCommand.Location = new System.Drawing.Point(824, 453);
+            this.kryptonTextBoxConsoleCommand.Name = "kryptonTextBoxConsoleCommand";
+            this.kryptonTextBoxConsoleCommand.Size = new System.Drawing.Size(248, 33);
+            this.kryptonTextBoxConsoleCommand.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBoxConsoleCommand.StateCommon.Border.Rounding = 12;
+            this.kryptonTextBoxConsoleCommand.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBoxConsoleCommand.TabIndex = 149;
+            // 
+            // kryptonButtonConsoleSend
+            // 
+            this.kryptonButtonConsoleSend.Location = new System.Drawing.Point(729, 194);
+            this.kryptonButtonConsoleSend.Name = "kryptonButtonConsoleSend";
+            this.kryptonButtonConsoleSend.Size = new System.Drawing.Size(30, 33);
+            this.kryptonButtonConsoleSend.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
+            this.kryptonButtonConsoleSend.StateCommon.Back.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonConsoleSend.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonConsoleSend.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonConsoleSend.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonConsoleSend.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonConsoleSend.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleSend.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonConsoleSend.StateCommon.Border.Width = 1;
+            this.kryptonButtonConsoleSend.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonConsoleSend.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleSend.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleSend.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonConsoleSend.StateDisabled.Border.Width = 2;
+            this.kryptonButtonConsoleSend.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleSend.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonConsoleSend.StateNormal.Border.Width = 2;
+            this.kryptonButtonConsoleSend.StatePressed.Back.Color1 = System.Drawing.Color.Magenta;
+            this.kryptonButtonConsoleSend.StatePressed.Back.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonConsoleSend.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonConsoleSend.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonConsoleSend.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonConsoleSend.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleSend.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonConsoleSend.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleSend.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleSend.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonConsoleSend.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonConsoleSend.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonConsoleSend.StateTracking.Border.Color1 = System.Drawing.Color.Purple;
+            this.kryptonButtonConsoleSend.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
+            this.kryptonButtonConsoleSend.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonConsoleSend.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonConsoleSend.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonConsoleSend.StateTracking.Border.Width = 2;
+            this.kryptonButtonConsoleSend.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonConsoleSend.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleSend.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonConsoleSend.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonConsoleSend.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonConsoleSend.TabIndex = 150;
+            this.kryptonButtonConsoleSend.Values.Text = "/";
+            this.kryptonButtonConsoleSend.Click += new System.EventHandler(this.kryptonButtonConsoleSend_Click);
+            // 
+            // kryptonButtonDefaultSettingsOpensaves
+            // 
+            this.kryptonButtonDefaultSettingsOpensaves.Location = new System.Drawing.Point(660, 194);
+            this.kryptonButtonDefaultSettingsOpensaves.Name = "kryptonButtonDefaultSettingsOpensaves";
+            this.kryptonButtonDefaultSettingsOpensaves.Size = new System.Drawing.Size(190, 33);
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Back.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Width = 1;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpensaves.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpensaves.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpensaves.StateDisabled.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsOpensaves.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpensaves.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpensaves.StateNormal.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Back.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Back.Color2 = System.Drawing.Color.Green;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpensaves.TabIndex = 151;
+            this.kryptonButtonDefaultSettingsOpensaves.Values.Text = "Open saves";
+            this.kryptonButtonDefaultSettingsOpensaves.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsOpensaves_Click);
+            // 
+            // kryptonButtonDefaultSettingsOpenbackups
+            // 
+            this.kryptonButtonDefaultSettingsOpenbackups.Location = new System.Drawing.Point(664, 194);
+            this.kryptonButtonDefaultSettingsOpenbackups.Name = "kryptonButtonDefaultSettingsOpenbackups";
+            this.kryptonButtonDefaultSettingsOpenbackups.Size = new System.Drawing.Size(190, 33);
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Back.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Width = 1;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpenbackups.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpenbackups.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateDisabled.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpenbackups.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateNormal.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Back.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Back.Color2 = System.Drawing.Color.Green;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsOpenbackups.TabIndex = 152;
+            this.kryptonButtonDefaultSettingsOpenbackups.Values.Text = "Open backups";
+            this.kryptonButtonDefaultSettingsOpenbackups.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsOpenbackups_Click);
+            // 
+            // kryptonButtonDefaultSettingsReset
+            // 
+            this.kryptonButtonDefaultSettingsReset.Location = new System.Drawing.Point(664, 194);
+            this.kryptonButtonDefaultSettingsReset.Name = "kryptonButtonDefaultSettingsReset";
+            this.kryptonButtonDefaultSettingsReset.Size = new System.Drawing.Size(190, 33);
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Back.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Back.Color2 = System.Drawing.Color.DarkTurquoise;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.Width = 1;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsReset.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsReset.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsReset.StateDisabled.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsReset.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsReset.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsReset.StateNormal.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Back.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Back.Color2 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.Color2 = System.Drawing.Color.DarkTurquoise;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.Width = 2;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonDefaultSettingsReset.TabIndex = 153;
+            this.kryptonButtonDefaultSettingsReset.Values.Text = "Global reset";
+            this.kryptonButtonDefaultSettingsReset.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsReset_Click);
             // 
             // pictureBoxSave
             // 
@@ -3589,737 +4325,223 @@ namespace rpass
             this.pictureBoxRPassIcon.TabIndex = 92;
             this.pictureBoxRPassIcon.TabStop = false;
             // 
-            // kryptonLabelBigTitleDefaultsettings
+            // kryptonLabelBigTitleChangeSalt
             // 
-            this.kryptonLabelBigTitleDefaultsettings.Location = new System.Drawing.Point(533, 523);
-            this.kryptonLabelBigTitleDefaultsettings.Name = "kryptonLabelBigTitleDefaultsettings";
-            this.kryptonLabelBigTitleDefaultsettings.Size = new System.Drawing.Size(27, 38);
-            this.kryptonLabelBigTitleDefaultsettings.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelBigTitleDefaultsettings.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelBigTitleDefaultsettings.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelBigTitleDefaultsettings.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelBigTitleDefaultsettings.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelBigTitleDefaultsettings.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelBigTitleDefaultsettings.TabIndex = 137;
-            this.kryptonLabelBigTitleDefaultsettings.Values.Text = "s";
+            this.kryptonLabelBigTitleChangeSalt.Location = new System.Drawing.Point(392, 517);
+            this.kryptonLabelBigTitleChangeSalt.Name = "kryptonLabelBigTitleChangeSalt";
+            this.kryptonLabelBigTitleChangeSalt.Size = new System.Drawing.Size(426, 38);
+            this.kryptonLabelBigTitleChangeSalt.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelBigTitleChangeSalt.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelBigTitleChangeSalt.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelBigTitleChangeSalt.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonLabelBigTitleChangeSalt.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonLabelBigTitleChangeSalt.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
+            this.kryptonLabelBigTitleChangeSalt.TabIndex = 155;
+            this.kryptonLabelBigTitleChangeSalt.Values.Text = "Change default super secret code";
             // 
-            // kryptonComboBoxDefaultSettingsIfDarkTheme
+            // kryptonButtonChangeSaltSave
             // 
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.DropDownWidth = 173;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Items.AddRange(new object[] {
-            "Dark - Întunecat",
-            "Light - Luminat"});
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Location = new System.Drawing.Point(667, 254);
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Name = "kryptonComboBoxDefaultSettingsIfDarkTheme";
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Size = new System.Drawing.Size(169, 29);
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Sorted = true;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Color2 = System.Drawing.Color.Black;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.ColorAngle = 30F;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonChangeSaltSave.Location = new System.Drawing.Point(703, 194);
+            this.kryptonButtonChangeSaltSave.Name = "kryptonButtonChangeSaltSave";
+            this.kryptonButtonChangeSaltSave.Size = new System.Drawing.Size(81, 33);
+            this.kryptonButtonChangeSaltSave.StateCommon.Back.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonChangeSaltSave.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.kryptonButtonChangeSaltSave.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltSave.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonChangeSaltSave.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonChangeSaltSave.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltSave.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Rounding = 12;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Border.Width = 1;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Content.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Ubuntu", 10F);
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.DropBack.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.DropBack.Color2 = System.Drawing.Color.Black;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Back.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Back.Color2 = System.Drawing.Color.Black;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonChangeSaltSave.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltSave.StateCommon.Border.Width = 1;
+            this.kryptonButtonChangeSaltSave.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltSave.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltSave.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Ubuntu", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.TabIndex = 138;
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.Text = "Light - Luminat";
-            this.kryptonComboBoxDefaultSettingsIfDarkTheme.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxDefaultSettingsIfDarkTheme_SelectedIndexChanged);
+            this.kryptonButtonChangeSaltSave.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltSave.StateDisabled.Border.Width = 2;
+            this.kryptonButtonChangeSaltSave.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonChangeSaltSave.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltSave.StateNormal.Border.Width = 2;
+            this.kryptonButtonChangeSaltSave.StatePressed.Back.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonChangeSaltSave.StatePressed.Back.Color2 = System.Drawing.Color.Green;
+            this.kryptonButtonChangeSaltSave.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltSave.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonChangeSaltSave.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonChangeSaltSave.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonChangeSaltSave.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltSave.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltSave.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltSave.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonChangeSaltSave.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonChangeSaltSave.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltSave.StateTracking.Border.Color1 = System.Drawing.Color.Green;
+            this.kryptonButtonChangeSaltSave.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.kryptonButtonChangeSaltSave.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltSave.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButtonChangeSaltSave.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltSave.StateTracking.Border.Width = 2;
+            this.kryptonButtonChangeSaltSave.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltSave.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltSave.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltSave.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltSave.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltSave.TabIndex = 156;
+            this.kryptonButtonChangeSaltSave.Values.Text = "Save";
+            this.kryptonButtonChangeSaltSave.Click += new System.EventHandler(this.kryptonButtonChangeSaltSave_Click);
             // 
-            // kryptonButtonDefaultSettingsChangesalt
+            // kryptonButtonChangeSaltCancel
             // 
-            this.kryptonButtonDefaultSettingsChangesalt.Location = new System.Drawing.Point(636, 194);
-            this.kryptonButtonDefaultSettingsChangesalt.Name = "kryptonButtonDefaultSettingsChangesalt";
-            this.kryptonButtonDefaultSettingsChangesalt.Size = new System.Drawing.Size(190, 33);
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Back.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonChangeSaltCancel.Location = new System.Drawing.Point(707, 194);
+            this.kryptonButtonChangeSaltCancel.Name = "kryptonButtonChangeSaltCancel";
+            this.kryptonButtonChangeSaltCancel.Size = new System.Drawing.Size(81, 33);
+            this.kryptonButtonChangeSaltCancel.StateCommon.Back.Color1 = System.Drawing.Color.Red;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.kryptonButtonChangeSaltCancel.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Border.Width = 1;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsChangesalt.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsChangesalt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonChangeSaltCancel.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Border.Width = 1;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltCancel.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltCancel.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsChangesalt.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsChangesalt.StateDisabled.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsChangesalt.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonChangeSaltCancel.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltCancel.StateDisabled.Border.Width = 2;
+            this.kryptonButtonChangeSaltCancel.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsChangesalt.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsChangesalt.StateNormal.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Back.Color1 = System.Drawing.Color.Magenta;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Back.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonChangeSaltCancel.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltCancel.StateNormal.Border.Width = 2;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Back.Color1 = System.Drawing.Color.Red;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Back.Color2 = System.Drawing.Color.Red;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonChangeSaltCancel.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltCancel.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltCancel.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Border.Color1 = System.Drawing.Color.Red;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.kryptonButtonChangeSaltCancel.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsChangesalt.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsChangesalt.TabIndex = 139;
-            this.kryptonButtonDefaultSettingsChangesalt.Values.Text = "Change default salt";
-            this.kryptonButtonDefaultSettingsChangesalt.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsChangesalt_Click);
+            this.kryptonButtonChangeSaltCancel.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Border.Width = 2;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltCancel.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonChangeSaltCancel.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonChangeSaltCancel.TabIndex = 157;
+            this.kryptonButtonChangeSaltCancel.Values.Text = "Cancel";
+            this.kryptonButtonChangeSaltCancel.Click += new System.EventHandler(this.kryptonButtonChangeSaltCancel_Click);
             // 
-            // kryptonLabelDefaultSettingsLang
+            // kryptonButtonInfopassOpenLink
             // 
-            this.kryptonLabelDefaultSettingsLang.Location = new System.Drawing.Point(519, 505);
-            this.kryptonLabelDefaultSettingsLang.Name = "kryptonLabelDefaultSettingsLang";
-            this.kryptonLabelDefaultSettingsLang.Size = new System.Drawing.Size(264, 20);
-            this.kryptonLabelDefaultSettingsLang.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsLang.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsLang.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelDefaultSettingsLang.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsLang.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsLang.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelDefaultSettingsLang.TabIndex = 141;
-            this.kryptonLabelDefaultSettingsLang.Values.Text = "Default language: (when you open RPass)";
-            // 
-            // kryptonLabelDefaultSettingsTheme
-            // 
-            this.kryptonLabelDefaultSettingsTheme.Location = new System.Drawing.Point(550, 505);
-            this.kryptonLabelDefaultSettingsTheme.Name = "kryptonLabelDefaultSettingsTheme";
-            this.kryptonLabelDefaultSettingsTheme.Size = new System.Drawing.Size(248, 20);
-            this.kryptonLabelDefaultSettingsTheme.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsTheme.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsTheme.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelDefaultSettingsTheme.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsTheme.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsTheme.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelDefaultSettingsTheme.TabIndex = 142;
-            this.kryptonLabelDefaultSettingsTheme.Values.Text = "Default theme: (when you open RPass)";
-            // 
-            // kryptonLabelDefaultSettingsOther
-            // 
-            this.kryptonLabelDefaultSettingsOther.Location = new System.Drawing.Point(607, 497);
-            this.kryptonLabelDefaultSettingsOther.Name = "kryptonLabelDefaultSettingsOther";
-            this.kryptonLabelDefaultSettingsOther.Size = new System.Drawing.Size(140, 28);
-            this.kryptonLabelDefaultSettingsOther.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsOther.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsOther.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelDefaultSettingsOther.StateCommon.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsOther.StateCommon.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsOther.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 13F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelDefaultSettingsOther.TabIndex = 143;
-            this.kryptonLabelDefaultSettingsOther.Values.Text = "Other settings";
-            // 
-            // kryptonLabelDefaultSettingsWarn
-            // 
-            this.kryptonLabelDefaultSettingsWarn.Location = new System.Drawing.Point(473, 503);
-            this.kryptonLabelDefaultSettingsWarn.Name = "kryptonLabelDefaultSettingsWarn";
-            this.kryptonLabelDefaultSettingsWarn.Size = new System.Drawing.Size(363, 20);
-            this.kryptonLabelDefaultSettingsWarn.StateCommon.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsWarn.StateCommon.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonLabelDefaultSettingsWarn.StateCommon.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelDefaultSettingsWarn.StateCommon.ShortText.Color1 = System.Drawing.Color.Red;
-            this.kryptonLabelDefaultSettingsWarn.StateCommon.ShortText.Color2 = System.Drawing.Color.Red;
-            this.kryptonLabelDefaultSettingsWarn.StateCommon.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonLabelDefaultSettingsWarn.TabIndex = 144;
-            this.kryptonLabelDefaultSettingsWarn.Values.Text = "!! DON\'T USE UNLESS YOU KNOW WHAT ARE YOU DOING !!";
-            // 
-            // kryptonButtonConsoleToggle
-            // 
-            this.kryptonButtonConsoleToggle.Location = new System.Drawing.Point(646, 194);
-            this.kryptonButtonConsoleToggle.Name = "kryptonButtonConsoleToggle";
-            this.kryptonButtonConsoleToggle.Size = new System.Drawing.Size(190, 33);
-            this.kryptonButtonConsoleToggle.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
-            this.kryptonButtonConsoleToggle.StateCommon.Back.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonConsoleToggle.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonConsoleToggle.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonConsoleToggle.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonConsoleToggle.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonConsoleToggle.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonInfopassOpenLink.Location = new System.Drawing.Point(624, 56);
+            this.kryptonButtonInfopassOpenLink.Name = "kryptonButtonInfopassOpenLink";
+            this.kryptonButtonInfopassOpenLink.Size = new System.Drawing.Size(34, 33);
+            this.kryptonButtonInfopassOpenLink.StateCommon.Back.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Back.Color2 = System.Drawing.Color.DarkTurquoise;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Back.ColorAngle = 30F;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Border.ColorAngle = 30F;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleToggle.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonConsoleToggle.StateCommon.Border.Width = 1;
-            this.kryptonButtonConsoleToggle.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonConsoleToggle.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleToggle.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonInfopassOpenLink.StateCommon.Border.Rounding = 12;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Border.Width = 1;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonInfopassOpenLink.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonInfopassOpenLink.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleToggle.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonConsoleToggle.StateDisabled.Border.Width = 2;
-            this.kryptonButtonConsoleToggle.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonInfopassOpenLink.StateDisabled.Border.Rounding = 12;
+            this.kryptonButtonInfopassOpenLink.StateDisabled.Border.Width = 2;
+            this.kryptonButtonInfopassOpenLink.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleToggle.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonConsoleToggle.StateNormal.Border.Width = 2;
-            this.kryptonButtonConsoleToggle.StatePressed.Back.Color1 = System.Drawing.Color.Magenta;
-            this.kryptonButtonConsoleToggle.StatePressed.Back.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonConsoleToggle.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonConsoleToggle.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonConsoleToggle.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonConsoleToggle.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonInfopassOpenLink.StateNormal.Border.Rounding = 12;
+            this.kryptonButtonInfopassOpenLink.StateNormal.Border.Width = 2;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Back.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Back.Color2 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Back.ColorAngle = 30F;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Border.Color1 = System.Drawing.Color.White;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Border.Color2 = System.Drawing.Color.White;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleToggle.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonConsoleToggle.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleToggle.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleToggle.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonConsoleToggle.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonConsoleToggle.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonConsoleToggle.StateTracking.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonButtonConsoleToggle.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonConsoleToggle.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonConsoleToggle.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonButtonInfopassOpenLink.StatePressed.Border.Rounding = 12;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonInfopassOpenLink.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonInfopassOpenLink.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Back.ColorAngle = 30F;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Border.Color1 = System.Drawing.Color.RoyalBlue;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Border.Color2 = System.Drawing.Color.DarkTurquoise;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Border.ColorAngle = 30F;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleToggle.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonConsoleToggle.StateTracking.Border.Width = 2;
-            this.kryptonButtonConsoleToggle.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonConsoleToggle.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleToggle.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleToggle.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonConsoleToggle.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleToggle.TabIndex = 145;
-            this.kryptonButtonConsoleToggle.Values.Text = "TOGGLE CONSOLE";
-            this.kryptonButtonConsoleToggle.Click += new System.EventHandler(this.kryptonButtonConsoleToggle_Click);
-            // 
-            // kryptonButtonDefaultSettingsResetsalt
-            // 
-            this.kryptonButtonDefaultSettingsResetsalt.Location = new System.Drawing.Point(639, 194);
-            this.kryptonButtonDefaultSettingsResetsalt.Name = "kryptonButtonDefaultSettingsResetsalt";
-            this.kryptonButtonDefaultSettingsResetsalt.Size = new System.Drawing.Size(190, 33);
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Back.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Border.Width = 1;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsResetsalt.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsResetsalt.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsResetsalt.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsResetsalt.StateDisabled.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsResetsalt.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsResetsalt.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsResetsalt.StateNormal.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Back.Color1 = System.Drawing.Color.Magenta;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Back.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsResetsalt.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsResetsalt.TabIndex = 146;
-            this.kryptonButtonDefaultSettingsResetsalt.Values.Text = "Reset to default salt";
-            this.kryptonButtonDefaultSettingsResetsalt.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsResetsalt_Click);
-            // 
-            // kryptonButtonDefaultSettingsBack
-            // 
-            this.kryptonButtonDefaultSettingsBack.Location = new System.Drawing.Point(607, 194);
-            this.kryptonButtonDefaultSettingsBack.Name = "kryptonButtonDefaultSettingsBack";
-            this.kryptonButtonDefaultSettingsBack.Size = new System.Drawing.Size(270, 33);
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Back.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Back.Color2 = System.Drawing.Color.DarkTurquoise;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Border.Width = 1;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsBack.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsBack.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsBack.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsBack.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsBack.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsBack.StateNormal.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Back.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Back.Color2 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.Color2 = System.Drawing.Color.DarkTurquoise;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsBack.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsBack.TabIndex = 147;
-            this.kryptonButtonDefaultSettingsBack.Values.Text = "← Login";
-            this.kryptonButtonDefaultSettingsBack.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsBack_Click);
-            // 
-            // kryptonButtonLoginDefaultSettings
-            // 
-            this.kryptonButtonLoginDefaultSettings.Location = new System.Drawing.Point(630, 194);
-            this.kryptonButtonLoginDefaultSettings.Name = "kryptonButtonLoginDefaultSettings";
-            this.kryptonButtonLoginDefaultSettings.Size = new System.Drawing.Size(216, 33);
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Back.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Back.Color2 = System.Drawing.Color.DarkTurquoise;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Border.Width = 1;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonLoginDefaultSettings.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonLoginDefaultSettings.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonLoginDefaultSettings.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonLoginDefaultSettings.StateDisabled.Border.Width = 2;
-            this.kryptonButtonLoginDefaultSettings.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonLoginDefaultSettings.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonLoginDefaultSettings.StateNormal.Border.Width = 2;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Back.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Back.Color2 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.Color2 = System.Drawing.Color.DarkTurquoise;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Border.Width = 2;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonLoginDefaultSettings.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonLoginDefaultSettings.TabIndex = 148;
-            this.kryptonButtonLoginDefaultSettings.Values.Text = "Default settings";
-            this.kryptonButtonLoginDefaultSettings.Click += new System.EventHandler(this.kryptonButtonLoginDefaultSettings_Click);
-            // 
-            // kryptonTextBoxConsoleCommand
-            // 
-            this.kryptonTextBoxConsoleCommand.Location = new System.Drawing.Point(824, 453);
-            this.kryptonTextBoxConsoleCommand.Name = "kryptonTextBoxConsoleCommand";
-            this.kryptonTextBoxConsoleCommand.Size = new System.Drawing.Size(248, 33);
-            this.kryptonTextBoxConsoleCommand.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBoxConsoleCommand.StateCommon.Border.Rounding = 12;
-            this.kryptonTextBoxConsoleCommand.StateCommon.Content.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBoxConsoleCommand.TabIndex = 149;
-            // 
-            // kryptonButtonConsoleSend
-            // 
-            this.kryptonButtonConsoleSend.Location = new System.Drawing.Point(721, 194);
-            this.kryptonButtonConsoleSend.Name = "kryptonButtonConsoleSend";
-            this.kryptonButtonConsoleSend.Size = new System.Drawing.Size(30, 33);
-            this.kryptonButtonConsoleSend.StateCommon.Back.Color1 = System.Drawing.Color.Purple;
-            this.kryptonButtonConsoleSend.StateCommon.Back.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonConsoleSend.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonConsoleSend.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonConsoleSend.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonConsoleSend.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonConsoleSend.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleSend.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonConsoleSend.StateCommon.Border.Width = 1;
-            this.kryptonButtonConsoleSend.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonConsoleSend.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleSend.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleSend.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonConsoleSend.StateDisabled.Border.Width = 2;
-            this.kryptonButtonConsoleSend.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleSend.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonConsoleSend.StateNormal.Border.Width = 2;
-            this.kryptonButtonConsoleSend.StatePressed.Back.Color1 = System.Drawing.Color.Magenta;
-            this.kryptonButtonConsoleSend.StatePressed.Back.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonConsoleSend.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonConsoleSend.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonConsoleSend.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonConsoleSend.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleSend.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonConsoleSend.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleSend.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleSend.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonConsoleSend.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonConsoleSend.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonConsoleSend.StateTracking.Border.Color1 = System.Drawing.Color.Purple;
-            this.kryptonButtonConsoleSend.StateTracking.Border.Color2 = System.Drawing.Color.Magenta;
-            this.kryptonButtonConsoleSend.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonConsoleSend.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonConsoleSend.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonConsoleSend.StateTracking.Border.Width = 2;
-            this.kryptonButtonConsoleSend.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonConsoleSend.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleSend.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonConsoleSend.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonConsoleSend.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonConsoleSend.TabIndex = 150;
-            this.kryptonButtonConsoleSend.Values.Text = "/";
-            this.kryptonButtonConsoleSend.Click += new System.EventHandler(this.kryptonButtonConsoleSend_Click);
-            // 
-            // kryptonButtonDefaultSettingsOpensaves
-            // 
-            this.kryptonButtonDefaultSettingsOpensaves.Location = new System.Drawing.Point(640, 194);
-            this.kryptonButtonDefaultSettingsOpensaves.Name = "kryptonButtonDefaultSettingsOpensaves";
-            this.kryptonButtonDefaultSettingsOpensaves.Size = new System.Drawing.Size(190, 33);
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Back.Color1 = System.Drawing.Color.Green;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Border.Width = 1;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpensaves.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpensaves.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpensaves.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpensaves.StateDisabled.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsOpensaves.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpensaves.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpensaves.StateNormal.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Back.Color1 = System.Drawing.Color.Green;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Back.Color2 = System.Drawing.Color.Green;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.Color1 = System.Drawing.Color.Green;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpensaves.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpensaves.TabIndex = 151;
-            this.kryptonButtonDefaultSettingsOpensaves.Values.Text = "Open saves";
-            this.kryptonButtonDefaultSettingsOpensaves.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsOpensaves_Click);
-            // 
-            // kryptonButtonDefaultSettingsOpenbackups
-            // 
-            this.kryptonButtonDefaultSettingsOpenbackups.Location = new System.Drawing.Point(640, 194);
-            this.kryptonButtonDefaultSettingsOpenbackups.Name = "kryptonButtonDefaultSettingsOpenbackups";
-            this.kryptonButtonDefaultSettingsOpenbackups.Size = new System.Drawing.Size(190, 33);
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Back.Color1 = System.Drawing.Color.Green;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Border.Width = 1;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpenbackups.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpenbackups.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateDisabled.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpenbackups.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateNormal.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Back.Color1 = System.Drawing.Color.Green;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Back.Color2 = System.Drawing.Color.Green;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.Color1 = System.Drawing.Color.Green;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsOpenbackups.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsOpenbackups.TabIndex = 152;
-            this.kryptonButtonDefaultSettingsOpenbackups.Values.Text = "Open backups";
-            this.kryptonButtonDefaultSettingsOpenbackups.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsOpenbackups_Click);
-            // 
-            // kryptonButtonDefaultSettingsReset
-            // 
-            this.kryptonButtonDefaultSettingsReset.Location = new System.Drawing.Point(636, 194);
-            this.kryptonButtonDefaultSettingsReset.Name = "kryptonButtonDefaultSettingsReset";
-            this.kryptonButtonDefaultSettingsReset.Size = new System.Drawing.Size(190, 33);
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Back.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Back.Color2 = System.Drawing.Color.DarkTurquoise;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Border.Width = 1;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsReset.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsReset.StateDisabled.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsReset.StateDisabled.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsReset.StateDisabled.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsReset.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsReset.StateNormal.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsReset.StateNormal.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Back.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Back.Color2 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Border.Color1 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Border.Color2 = System.Drawing.Color.White;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StatePressed.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Back.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.Color1 = System.Drawing.Color.RoyalBlue;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.Color2 = System.Drawing.Color.DarkTurquoise;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.Rounding = 12;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Border.Width = 2;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.LongText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.ColorAngle = 30F;
-            this.kryptonButtonDefaultSettingsReset.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
-            this.kryptonButtonDefaultSettingsReset.TabIndex = 153;
-            this.kryptonButtonDefaultSettingsReset.Values.Text = "Global reset";
-            this.kryptonButtonDefaultSettingsReset.Click += new System.EventHandler(this.kryptonButtonDefaultSettingsReset_Click);
+            this.kryptonButtonInfopassOpenLink.StateTracking.Border.Rounding = 12;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Border.Width = 2;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Content.LongText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Content.LongText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Content.LongText.ColorAngle = 30F;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Content.LongText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonInfopassOpenLink.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.Black;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Content.ShortText.ColorAngle = 30F;
+            this.kryptonButtonInfopassOpenLink.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.kryptonButtonInfopassOpenLink.TabIndex = 158;
+            this.kryptonButtonInfopassOpenLink.Values.Text = "⧉";
+            this.kryptonButtonInfopassOpenLink.Click += new System.EventHandler(this.kryptonButtonInfopassOpenLink_Click);
             // 
             // Form1
             // 
@@ -4327,6 +4549,10 @@ namespace rpass
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.kryptonButtonInfopassOpenLink);
+            this.Controls.Add(this.kryptonButtonChangeSaltCancel);
+            this.Controls.Add(this.kryptonButtonChangeSaltSave);
+            this.Controls.Add(this.kryptonLabelBigTitleChangeSalt);
             this.Controls.Add(this.kryptonButtonDefaultSettingsReset);
             this.Controls.Add(this.kryptonButtonDefaultSettingsOpenbackups);
             this.Controls.Add(this.kryptonButtonDefaultSettingsOpensaves);
@@ -4474,6 +4700,7 @@ namespace rpass
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxIfDarkTheme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxProfileColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLoginLangSelector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDefaultSettingsIfDarkTheme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLoginIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUseryellow)).EndInit();
@@ -4482,7 +4709,6 @@ namespace rpass
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUserblue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsergray)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRPassIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDefaultSettingsIfDarkTheme)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4624,6 +4850,10 @@ namespace rpass
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButtonDefaultSettingsOpensaves;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButtonDefaultSettingsOpenbackups;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButtonDefaultSettingsReset;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabelBigTitleChangeSalt;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButtonChangeSaltSave;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButtonChangeSaltCancel;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButtonInfopassOpenLink;
     }
 }
 

@@ -161,6 +161,11 @@ namespace rpass
             "Default settings",
             "Setări implicite"
         };
+        public string[] title15changedefsalt = new string[2] // title13 default settings
+        {
+            "Change default super secret code",
+            "Schimbați codul super secret implicit"
+        };
         // minititles
         public string[] minititle1passtobesaved = new string[2] // minititle1 password to be saved
         {
@@ -487,13 +492,28 @@ namespace rpass
         };
         public string[] minititle45notifsaltreset = new string[2] // minititle45 notification salt reseted
         {
-            "The salt was reseted",
-            "Salt-ul a fost resetat"
+            "The default super secret code was reseted",
+            "Codul super secret implicit a fost resetat"
         };
         public string[] minititle46notifsaltreset = new string[2] // minititle46 notification salt reseted
         {
-            "The salt was reseted to it's default value.",
-            "Salt-ul a fost resetat la valoarea implicită."
+            "The default super secret code was reseted to it's default value.",
+            "Codul super secret implicit a fost resetat la valoarea implicită."
+        };
+        public string[] minititle47notifsaltchanged = new string[2] // minititle47 notification salt changed
+        {
+            "The default super secret code was modified successfully.",
+            "Codul super secret implicit a fost modificat cu succes."
+        };
+        public string[] minititle48notifsaltchanged = new string[2] // minititle48 notification salt changed
+        {
+            "Default SSC changed",
+            "CSS implicit a fost schimbat"
+        };
+        public string[] minititle49invalidlink = new string[2] // minititle49 invalid link
+        {
+            "[invalid link]",
+            "[link invalid]"
         };
         //buttons
         public string[] button1save = new string[2] // button1 save
@@ -623,13 +643,13 @@ namespace rpass
         };
         public string[] button26resetsalt = new string[2] // minititle26 reset salt
         {
-            "Reset to default salt",
-            "Resetați la salt-ul implicit"
+            "Reset to default SSC",
+            "Resetați la CSS implicit"
         };
         public string[] button27changesalt = new string[2] // minititle27 change salt
         {
-            "Change default salt",
-            "Schimbați salt-ul implicit"
+            "Change default SSC",
+            "Schimbați CSS implicit"
         };
         public string[] button28toggleconsole = new string[2] // minititle27 change salt
         {
@@ -653,8 +673,8 @@ namespace rpass
         };
         public string[] button32globalreset = new string[2] // button32 global reset
         {
-            "Global reset",
-            "Resetare globală"
+            "Local app reset",
+            "Resetare locală aplicație"
         };
     }
 }
