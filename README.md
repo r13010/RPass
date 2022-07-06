@@ -5,8 +5,9 @@ Current version beta 1.00210322a
 # Download 
 Go here: https://github.com/r13010/RPass/releases/tag/rpass
 
-#License
-Copyright (C) 2022 Alexăndroae Valentin
+# License
+
+	Copyright (C) 2022 Alexăndroae Valentin
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
