@@ -1,5 +1,6 @@
 # RPass
-Encrypted Password Manager - locally, offline, secure'
+Encrypted Password Manager - locally, offline, secure
+
 Current version beta 1.00210322a
 
 # Download 
