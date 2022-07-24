@@ -2,6 +2,7 @@
 Encrypted Password Manager - locally, offline, secure
 
 RPass (from this repository) that was built on WindowsForms is considered as rpass-legacy.
+
 RPass (as "RPass2") can be found here: https://github.com/r13010/RPass-Electron
 
 Current version beta 1.00210322a
